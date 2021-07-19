@@ -2,7 +2,7 @@
 <html lang=en>
 
 <head>
-   
+
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
@@ -38,7 +38,7 @@
    <script>
       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");
    </script>
-   
+
 </head>
 
 <body>
@@ -152,7 +152,7 @@
                <div class="row">
                   <div class="col col-md-9">
                      <h3>Send us an Email</h3>
-                     <form class="contact-form form contact-validation-active row" id="contact-form-s2"
+                     <form method="POST" class="contact-form form contact-validation-active row" id="contact-form-s2"
                         novalidate="novalidate">
                         <div class="col col-sm-6">
                            <label for="f-name">First Name</label>
@@ -197,9 +197,34 @@
    <script src="/assets/js/jquery-plugin-collection.js"></script>
    <script type=text/javascript src=https://maps.googleapis.com/maps/api/js?key></script>
    <script src="/assets/js/script.js"></script>
-   <script>
-      includeHTML();
-   </script>
+   <?php
+   use PHPMailer\PHPMailer\PHPMailer;
+   use PHPMailer\PHPMailer\Exception;
+   
+   require 'path/to/PHPMailer/src/Exception.php';
+   require 'path/to/PHPMailer/src/PHPMailer.php';
+   require 'path/to/PHPMailer/src/SMTP.php';
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'parabtechnologies@gmail.com';
+$mail->Password = 'Kayra@2018pp';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+
+$mail->setFrom('parabtechnologies@gmail.com');
+$mail->addAddress('prashant@parabtechnologies.com', 'Prashant Parab');
+$mail->Subject = 'Thanks for choosing Our Hotel!';
+$mail->isHTML(TRUE);
+$mail->Body = '<html>Hi there, we are happy to <br>confirm your booking.</br> Please check the document in the attachment.</html>';
+$mail->AltBody = 'Hi there, we are happy to confirm your booking. Please check the document in the attachment.';
+if(!$mail->send()){
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+} ?>
 </body>
 
 </html>
