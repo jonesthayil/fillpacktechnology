@@ -16,25 +16,25 @@
    <meta name=language content=English>
    <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
    <title> Fillpack - Hopper Piston Type Filling For Shrikhand</title>
-   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
-   <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
-   <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
-   <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
-   <link href=assets/images/favicon/apple-touch-icon-144x144.png rel=apple-touch-icon sizes=144x144>
-   <link href=assets/css/font-awesome.min.css rel=stylesheet>
-   <link href=assets/css/flaticon.css rel=stylesheet>
-   <link href=assets/css/bootstrap.min.css rel=stylesheet>
-   <link href=assets/css/animate.css rel=stylesheet>
-   <link href=assets/css/owl.carousel.css rel=stylesheet>
-   <link href=assets/css/owl.theme.css rel=stylesheet>
-   <link href=assets/css/slick.css rel=stylesheet>
-   <link href=assets/css/slick-theme.css rel=stylesheet>
-   <link href=assets/css/owl.transitions.css rel=stylesheet>
-   <link href=assets/css/jquery.fancybox.css rel=stylesheet>
-   <link href=assets/css/jquery.mCustomScrollbar.min.css rel=stylesheet>
-   <link href=assets/css/style.css rel=stylesheet>
-   <link href=assets/css/mystyle.css rel=stylesheet>
-   <link href=assets/css/moblie.css rel=stylesheet>
+   <link href="/assets/images/favicon/favicon.ico" rel="shortcut icon" type=image/png>
+   <link href="/assets/images/favicon/apple-icon-57x57.png" rel=apple-touch-icon sizes=57x57>
+   <link href="/assets/images/favicon/apple-touch-icon-72x72.png" rel=apple-touch-icon sizes=72x72>
+   <link href="/assets/images/favicon/apple-touch-icon-114x114.png" rel=apple-touch-icon sizes=114x114>
+   <link href="/assets/images/favicon/apple-touch-icon-144x144.png" rel=apple-touch-icon sizes=144x144>
+   <link href="/assets/css/font-awesome.min.css" rel=stylesheet>
+   <link href="/assets/css/flaticon.css" rel=stylesheet>
+   <link href="/assets/css/bootstrap.min.css" rel=stylesheet>
+   <link href="/assets/css/animate.css" rel=stylesheet>
+   <link href="/assets/css/owl.carousel.css" rel=stylesheet>
+   <link href="/assets/css/owl.theme.css" rel=stylesheet>
+   <link href="/assets/css/slick.css" rel=stylesheet>
+   <link href="/assets/css/slick-theme.css" rel=stylesheet>
+   <link href="/assets/css/owl.transitions.css" rel=stylesheet>
+   <link href="/assets/css/jquery.fancybox.css" rel=stylesheet>
+   <link href="/assets/css/jquery.mCustomScrollbar.min.css" rel=stylesheet>
+   <link href="/assets/css/style.css" rel=stylesheet>
+   <link href="/assets/css/mystyle.css" rel=stylesheet>
+   <link href="/assets/css/moblie.css" rel=stylesheet>
    <link
       href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700 Montserrat:300,400,500,600,700 Crete+Round:400italic"
       rel=stylesheet type=text/css>
@@ -44,7 +44,7 @@
    <div class=page-wrapper>
       <div class=preloader>
          <div class=preloader-inner>
-            <img src=assets/images/preloader.gif alt>
+            <img src="/assets/images/preloader.gif" alt="">
          </div>
       </div>
       <header id=header class="site-header header-style-5">
@@ -68,7 +68,7 @@
                <div class="col col-md-8 col-md-push-4">
                   <div class=service-single-content>
                      <div>
-                        <img src=assets/images/product/hopper.jpg alt class=extraimg>
+                        <img src="/assets/images/product/hopper.jpg" alt class=extraimg>
                      </div>
                      <div class=title>
                         <h3> Hopper Piston Type Filling For Shrikhand</h3>
@@ -94,15 +94,15 @@
                      <div class="services-link-widget widget">
                         <ul>
                            <li class=current><a href=#>Hopper Piston Type Filling For Shrikhand</a></li>
-                           <li><a href=paneer-cutting-machine.php>Paneer cutting machine</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>Automatic Curd Cup Filling
+                           <li><a href="/dairy/paneer-cutting-machine.php">Paneer cutting machine</a></li>
+                           <li><a href=/dairy/automatic-curd-cup-filling-and-sealing-machine.php>Automatic Curd Cup Filling
                                  And Sealing Machine</a></li>
-                           <li><a href=linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
-                           <li><a href=web-sealing-machine.php>Web Sealing Machine</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>Automatic Auger Filler
+                           <li><a href=/dairy/linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
+                           <li><a href=/dairy/web-sealing-machine.php>Web Sealing Machine</a></li>
+                           <li><a href=/dairy/automatic-curd-cup-filling-and-sealing-machine.php>Automatic Auger Filler
                                  Machine</a></li>
-                           <li><a href=bottle-washing-machine.php>bottle washing machine</a></li>
-                           <li><a href=vacuum-packing-machine.php>vacuum packing machine</a></li>
+                           <li><a href=/dairy/bottle-washing-machine.php>bottle washing machine</a></li>
+                           <li><a href=/dairy/vacuum-packing-machine.php>vacuum packing machine</a></li>
                            <li><a href=horizontal-flow-pack-packing-machine.php>Horizontal Flow Pack Packing
                                  Machine</a></li>
                            <li><a href=paneer-pressing-machine.php>paneer pressing machine</a></li>
@@ -128,11 +128,11 @@
       </section>
       <?php include ("footer.php"); ?>
    </div>
-   <script src=assets/js/jquery.min.js></script>
-   <script src=assets/js/bootstrap.min.js></script>
-   <script src=assets/js/jquery-plugin-collection.js></script>
-   <script src=assets/js/jquery.mCustomScrollbar.js></script>
-   <script src=assets/js/script.js></script>
+   <script src="/assets/js/jquery.min.js"></script>
+   <script src="/assets/js/bootstrap.min.js"></script>
+   <script src="/assets/js/jquery-plugin-collection.js"></script>
+   <script src="/assets/js/jquery.mCustomScrollbar.js"></script>
+   <script src="/assets/js/script.js"></script>
    <script>
       includeHTML();
    </script>

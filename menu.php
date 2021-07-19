@@ -51,7 +51,7 @@ echo '<div class="topbar topbar-style-2">
                <h4 class="modal-title" id="myModalLabel">Employee Of The Month</h4>
             </div>
             <div class="modal-body">
-               <img src="assets/images/employee-of-the-month-big-img.jpeg" />
+               <img src="/assets/images/employee-of-the-month-big-img.jpeg" />
             </div>
          </div>
       </div>
@@ -66,7 +66,7 @@ echo '<div class="topbar topbar-style-2">
          <div class="col col-sm-3">
             <div class=site-logo>
                <a href="/">
-                  <img src=assets/images/fillpacklogo.png alt>
+                  <img src="/assets/images/fillpacklogo.png" alt="">
                </a>
             </div>
          </div>
@@ -109,117 +109,117 @@ echo '<div class="topbar topbar-style-2">
          <ul class="nav navbar-nav">
             <li class=menu-item-has-children> <a href="/">Home</a>
             </li>
-            <li><a href=about.php>About</a>
+            <li><a href="about.php" >About</a>
             </li>
             <li class=menu-item-has-children>
-               <a href=dairy.php>Dairy</a>
+               <a href="dairy.php" >Dairy</a>
                <ul class=sub-menu>
-                  <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php">Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
+                  <li><a href="/dairy/bottle-washing-machine.php" >Bottle Washing Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Glass Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Glass Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Automatic Cup Filling & Sealing Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Automatic Cup Filling & Sealing Machine</a>
                   </li>
-                  <li><a href=vacuum-packing-machine.php>Vacuum Packing Machine</a>
+                  <li><a href="/dairy/vacuum-packing-machine.php" >Vacuum Packing Machine</a>
                   </li>
-                  <li><a href=paneer-pressing-machine.php>Paneer Pressing Machine</a>
+                  <li><a href="/dairy/paneer-pressing-machine.php" >Paneer Pressing Machine</a>
                   </li>
-                  <li><a href=paneer-cutting-machine.php>Paneer/cheese/Tofu cutting machine</a>
+                  <li><a href="/dairy/paneer-cutting-machine.php" >Paneer/cheese/Tofu cutting machine</a>
                   </li>
-                  <li><a href=paneer-cubing-machine.php>Paneer Cubing Machine</a>
+                  <li><a href="paneer-cubing-machine.php" >Paneer Cubing Machine</a>
                   </li>
-                  <li><a href=horizontal-flow-pack-packing-machine.php>Flow Wrap Machine</a>
+                  <li><a href="/dairy/horizontal-flow-pack-packing-machine.php" >Flow Wrap Machine</a>
                   </li>
-                  <li><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a>
+                  <li><a href="/dairy/linear-conduction-sealing-machine.php" >Conduction Sealing Machine</a>
                   </li>
-                  <li><a href=web-sealing-machine.php>Web Sealer Machine </a>
+                  <li><a href="/dairy/web-sealing-machine.php" >Web Sealer Machine </a>
                   </li>
                </ul>
             </li>
             <li class=menu-item-has-children>
-               <a href=food.php>Food</a>
+               <a href="food.php" >Food</a>
                <ul class=sub-menu>
-                  <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
+                  <li><a href="/dairy/bottle-washing-machine.php" >Bottle Washing Machine</a>
                   </li>
-                  <li><a href=automatic-auger-filler-with-screw-conveyor.php>Automatic Auger Filler Machine</a>
+                  <li><a href="/dairy/automatic-auger-filler-with-screw-conveyor.php" >Automatic Auger Filler Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Automatic Cup Filling & Sealing Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Automatic Cup Filling & Sealing Machine</a>
                   </li>
-                  <li><a href=vacuum-packing-machine.php>Vacuum Packing Machine</a>
+                  <li><a href="/dairy/vacuum-packing-machine.php" >Vacuum Packing Machine</a>
                   </li>
-                  <li><a href=vacuum-packing-machine.php>Hopper Piston Type Filling Machine</a>
+                  <li><a href="/dairy/vacuum-packing-machine.php" >Hopper Piston Type Filling Machine</a>
                   </li>
-                  <li><a href=horizontal-flow-pack-packing-machine.php>Flow Wrap Machine</a>
+                  <li><a href="/dairy/horizontal-flow-pack-packing-machine.php" >Flow Wrap Machine</a>
                   </li>
-                  <li><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a>
+                  <li><a href="/dairy/linear-conduction-sealing-machine.php" >Conduction Sealing Machine</a>
                   </li>
-                  <li><a href=tube-filling-machine.php>Tube Filling Machine</a>
+                  <li><a href="/dairy/tube-filling-machine.php" >Tube Filling Machine</a>
                   </li>
                </ul>
             </li>
             <li class=menu-item-has-children>
-               <a href=pharma.php>Pharma</a>
+               <a href="pharma.php" >Pharma</a>
                <ul class=sub-menu>
-                  <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
+                  <li><a href="/dairy/bottle-washing-machine.php" >Bottle Washing Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Glass Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Glass Bottle Filling Machine</a>
                   </li>
-                  <li><a href=automatic-auger-filler-with-screw-conveyor.php>Automatic Auger Filler Machine</a>
+                  <li><a href="/dairy/automatic-auger-filler-with-screw-conveyor.php" >Automatic Auger Filler Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Automatic Cup Filling & Sealing Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Automatic Cup Filling & Sealing Machine</a>
                   </li>
-                  <li><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a>
+                  <li><a href="/dairy/linear-conduction-sealing-machine.php" >Conduction Sealing Machine</a>
                   </li>
-                  <li><a href=tube-filling-machine.php>Tube Filling Machine</a>
+                  <li><a href="/dairy/tube-filling-machine.php" >Tube Filling Machine</a>
                   </li>
-                  <li><a href=web-sealing-machine.php>Web Sealer Machine </a>
+                  <li><a href="/dairy/web-sealing-machine.php" >Web Sealer Machine </a>
                   </li>
                </ul>
             </li>
             <li class=menu-item-has-children>
-               <a href=beverages.php>Beverage</a>
+               <a href="beverages.php" >Beverage</a>
                <ul class=sub-menu>
-                  <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
+                  <li><a href="/dairy/bottle-washing-machine.php" >Bottle Washing Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Glass Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Glass Bottle Filling Machine</a>
                   </li>
-                  <li><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a>
+                  <li><a href="/dairy/linear-conduction-sealing-machine.php" >Conduction Sealing Machine</a>
                   </li>
-                  <li><a href=web-sealing-machine.php>Web Sealer Machine </a>
+                  <li><a href="/dairy/web-sealing-machine.php" >Web Sealer Machine </a>
                   </li>
                </ul>
             </li>
             <li class=menu-item-has-children>
-               <a href=cosmetics.php>Cosmetic</a>
+               <a href="cosmetics.php" >Cosmetic</a>
                <ul class=sub-menu>
-                  <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Bottle Filling Machine</a>
                   </li>
-                  <li><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
+                  <li><a href="/dairy/bottle-washing-machine.php" >Bottle Washing Machine</a>
                   </li>
-                  <li><a href=bottle-filling-machine.php>Glass Bottle Filling Machine</a>
+                  <li><a href="/dairy/bottle-filling-machine.php" >Glass Bottle Filling Machine</a>
                   </li>
-                  <li><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a>
+                  <li><a href="/dairy/linear-conduction-sealing-machine.php" >Conduction Sealing Machine</a>
                   </li>
-                  <li><a href=web-sealing-machine.php>Web Sealer Machine</a>
+                  <li><a href="/dairy/web-sealing-machine.php" >Web Sealer Machine</a>
                   </li>
                </ul>
             </li>
-            <li><a href=contact.php>Contact</a>
+            <li><a href="contact.php" >Contact</a>
             </li>
          </ul>
       </div>
       <div class=cart-contact>
          <div class=mini-cart></div>
       </div>
-      <a href=contact.php target=_blank class="theme-btn-s2 request-quote">Request Quote</a>
+      <a href="contact.php" target=_blank class="theme-btn-s2 request-quote">Request Quote</a>
    </div>
 </nav>';
 ?>

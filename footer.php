@@ -6,7 +6,7 @@ echo '<footer class=site-footer>
          <div class="col col-md-4 col-sm-6">
             <div class="widget about-widget">
                <div class=footer-logo>
-                  <img src="assets/images/footerlogo.png">
+                  <img src="/assets/images/footerlogo.png">
                </div>
                <ul class=contact-info>The company has a successful leadership track record of two generations of
                   being in the same business of machine manufacturing, which once reckoned from machining job work

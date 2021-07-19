@@ -606,3 +606,6 @@ a.h2{
     font-weight: bold;
     color: #ffffff;
 }
+.rem1 {
+    padding-bottom: 1rem;
+}

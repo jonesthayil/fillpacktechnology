@@ -16,24 +16,24 @@
    <meta name=language content=English>
    <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
    <title>Fillpack - Contact</title>
-   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
-   <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
-   <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
-   <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
-   <link href=assets/images/favicon/apple-touch-icon-144x144.png rel=apple-touch-icon sizes=144x144>
-   <link href=assets/css/font-awesome.min.css rel=stylesheet>
-   <link href=assets/css/flaticon.css rel=stylesheet>
-   <link href=assets/css/bootstrap.min.css rel=stylesheet>
-   <link href=assets/css/animate.css rel=stylesheet>
-   <link href=assets/css/owl.carousel.css rel=stylesheet>
-   <link href=assets/css/owl.theme.css rel=stylesheet>
-   <link href=assets/css/slick.css rel=stylesheet>
-   <link href=assets/css/slick-theme.css rel=stylesheet>
-   <link href=assets/css/owl.transitions.css rel=stylesheet>
-   <link href=assets/css/jquery.fancybox.css rel=stylesheet>
-   <link href=assets/css/jquery.mCustomScrollbar.min.css rel=stylesheet>
-   <link href=assets/css/style.css rel=stylesheet>
-   <link href=assets/css/mystyle.css rel=stylesheet>
+   <link href="/assets/images/favicon/favicon.ico" rel="shortcut icon" type=image/png>
+   <link href="/assets/images/favicon/apple-icon-57x57.png" rel=apple-touch-icon sizes=57x57>
+   <link href="/assets/images/favicon/apple-touch-icon-72x72.png" rel=apple-touch-icon sizes=72x72>
+   <link href="/assets/images/favicon/apple-touch-icon-114x114.png" rel=apple-touch-icon sizes=114x114>
+   <link href="/assets/images/favicon/apple-touch-icon-144x144.png" rel=apple-touch-icon sizes=144x144>
+   <link href="/assets/css/font-awesome.min.css" rel=stylesheet>
+   <link href="/assets/css/flaticon.css" rel=stylesheet>
+   <link href="/assets/css/bootstrap.min.css" rel=stylesheet>
+   <link href="/assets/css/animate.css" rel=stylesheet>
+   <link href="/assets/css/owl.carousel.css" rel=stylesheet>
+   <link href="/assets/css/owl.theme.css" rel=stylesheet>
+   <link href="/assets/css/slick.css" rel=stylesheet>
+   <link href="/assets/css/slick-theme.css" rel=stylesheet>
+   <link href="/assets/css/owl.transitions.css" rel=stylesheet>
+   <link href="/assets/css/jquery.fancybox.css" rel=stylesheet>
+   <link href="/assets/css/jquery.mCustomScrollbar.min.css" rel=stylesheet>
+   <link href="/assets/css/style.css" rel=stylesheet>
+   <link href="/assets/css/mystyle.css" rel=stylesheet>
    <script>
       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");
    </script>
@@ -44,7 +44,7 @@
    <div class=page-wrapper>
       <div class=preloader>
          <div class=preloader-inner>
-            <img src=assets/images/preloader.gif alt>
+            <img src="/assets/images/preloader.gif" alt="">
          </div>
       </div>
       <header id=header class="site-header header-style-5">
@@ -191,11 +191,11 @@
       </section>
       <?php include ("footer.php"); ?>
    </div>
-   <script src=assets/js/jquery.min.js></script>
-   <script src=assets/js/bootstrap.min.js></script>
-   <script src=assets/js/jquery-plugin-collection.js></script>
+   <script src="/assets/js/jquery.min.js"></script>
+   <script src="/assets/js/bootstrap.min.js"></script>
+   <script src="/assets/js/jquery-plugin-collection.js"></script>
    <script type=text/javascript src=https://maps.googleapis.com/maps/api/js?key></script>
-   <script src=assets/js/script.js></script>
+   <script src="/assets/js/script.js"></script>
    <script>
       includeHTML();
    </script>
