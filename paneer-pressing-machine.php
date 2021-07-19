@@ -2,44 +2,14 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <title> Fillpack - Bottle Filling achine </title>
+   <title> Fillpack -Paneer Pressing Machine </title>
    <meta name="description"
-      content="Manufacturer of Bottle Filling Machine - 60 BPM Filling Capping Machine, Mineral Water Bottle Filling Machine, 3- In-1 PET Bottle Or Glass Bottle Soft Drink Filling Plant and 3- In-1 Pet Or Glass Bottle Carbonated Drink Filling Plant offered by Associated fillpack technology, Ambernath, Maharastra." />
-   <meta name="keywords"
-      content="Bottle Filling Machine, 60BPM Filling Capping Machine, Bottle Filling Machine, 3- In-1 PET Bottle Or Glass Bottle Soft Drink Filling Plant, 3- In-1 Pet Or Glass Bottle Carbonated Drink Filling Plant" />
+      content="At Fillpack technology providing a Paneer press machine, CHEESE PRESS MACHINE, TOFU PRESSING MACHINE" />
+   <meta name="keywords" content="PANEER PRESS MACHINE, CHEESE PRESS MACHINE, TOFU PRESSING MACHINE " />
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -60,8 +30,8 @@
    <link href=assets/css/mystyle.css rel=stylesheet>
    <link href=assets/css/moblie.css rel=stylesheet>
    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Montserrat:300,400,500,600,700|Crete+Round:400italic"
-      rel=stylesheet type=text/css />
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700 Montserrat:300,400,500,600,700 Crete+Round:400italic"
+      rel=stylesheet type=text/css>
 </head>
 
 <body>
@@ -72,16 +42,13 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <section class=page-title>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Bottle Filling Machine</h2>
-                  <ol class=breadcrumb>
-                     <li><a href=index.html>Home</a></li>
-                  </ol>
+                  <h2>Paneer Pressing Machine</h2>
                </div>
             </div>
          </div>
@@ -92,29 +59,25 @@
                <div class="col col-md-8 col-md-push-4">
                   <div class=service-single-content>
                      <div>
-                        <img src=assets/images/product/filling-line.jpg class=extraimg alt>
+                        <img src=assets/images/product/Paneer-1.jpg alt class=extraimg>
                      </div>
                      <div class=title>
-                        <h3>Bottle Filling Machine</h3>
+                        <h3>Paneer Pressing Machine</h3>
                      </div>
                      <div class=details>
                         <ul>
-                           <li><i class="fa fa-arrow-right"></i> The filling machine will be operated automatic type
-                              with 2/4/6/8 heads preferably with diving nozzle type to avoid foaming during filling
-                              process.</li>
-                           <li><i class="fa fa-arrow-right"></i>All the working parts of the machine coming in contact
-                              with the product are S.S.316 (filling cylinder & nozzle).</li>
-                           <li><i class="fa fa-arrow-right"></i>Conveyor had inlet & outlet ends of the machine variable
-                              speed to synchronize with the filling the filling machine speed. The conveyor tailing
-                              width adjustable.</li>
-                           <li><i class="fa fa-arrow-right"></i>Casing of the machine of S.S.304</li>
-                           <li><i class="fa fa-arrow-right"></i>Filling accuracy for various volumes within range of
-                              +-0.5% on volume</li>
-                           <li><i class="fa fa-arrow-right"></i>Filling head height will be adjustable.</li>
+                           <li><i class="fa fa-arrow-right"></i>Complete Machine Manufactured with S.S.304</li>
+                           <li><i class="fa fa-arrow-right"></i>Pressing Capacity: 4, 16 Mould</li>
+                           <li><i class="fa fa-arrow-right"></i>SS Hooves: 4, 16 No.</li>
+                           <li><i class="fa fa-arrow-right"></i>Solenoid Valve 5 No.</li>
+                           <li><i class="fa fa-arrow-right"></i>Digital Timer:1, 4 No.</li>
+                           <li><i class="fa fa-arrow-right"></i>Air Pressure: 4 Bar</li>
+                           <li><i class="fa fa-arrow-right"></i>Machine Dimension: 2400(L)x600(W)x1800(H)</li>
+                           <li><i class="fa fa-arrow-right"></i>Machine Weight: 80Kgs, 250Kgs.</li>
                         </ul>
                         <h4></h4>
                         <div class=extrabtn>
-                           <a href=contact.html class="theme-btn extrabtn">Contact us</a>
+                           <a href=contact.php class="theme-btn extrabtn">Contact us</a>
                         </div>
                      </div>
                   </div>
@@ -123,19 +86,21 @@
                   <div class=service-single-sidebar>
                      <div class="services-link-widget widget">
                         <ul>
-                           <li class=current><a href=#>Bottle Filling Machine</a></li>
-                           <li><a href=paneer-cutting-machine.html>Paneer cutting machine</a></li>
-                           <li><a href=linear-conduction-sealing-machine.html>linear conduction sealing machine</a></li>
-                           <li><a href=automatic-auger-filler-with-screw-conveyor.html>automatic auger filler
-                                 machine</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.html>automatic curd cup filling
+                           <li class=current><a href=#>Paneer Pressing Machine</a></li>
+                           <li><a href=paneer-cutting-machine.php>Paneer cutting machine</a></li>
+                           <li><a href=linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
+                           <li><a href=web-sealing-machine.php>Web Sealing Machine</a></li>
+                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>automatic curd cup filling
                                  and sealing</a></li>
-                           <li><a href=bottle-washing-machine.html>bottle washing machine</a></li>
-                           <li><a href=vacuum-packing-machine.html>vacuum packing machine</a></li>
-                           <li><a href=horizontal-flow-pack-packing-machine.html>horizontal flow pack packing
-                                 machine</a></li>
-                           <li><a href=paneer-pressing-machine.html>paneer pressing machine</a></li>
-                           <li><a href=tube-filling-machine.html>tube filling machine</a></li>
+                           <li><a href=bottle-washing-machine.php>bottle washing machine</a></li>
+                           <li><a href=vacuum-packing-machine.php>vacuum packing machine</a></li>
+                           <li><a
+                                 href=horizontal-flow-pack-packing-machine.php>horizontal-flow-pack-packing-machine</a>
+                           </li>
+                           <li><a href=automatic-auger-filler-with-screw-conveyor.php>Automatic Auger Filler With Screw
+                                 Conveyor</a></li>
+                           <li><a href=tube-filling-machine.php> tube filling machine</a></li>
+                           <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a></li>
                         </ul>
                      </div>
                      <div class="widget contact-widget">
@@ -191,15 +156,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

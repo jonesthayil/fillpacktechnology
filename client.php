@@ -1,35 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>lang="en">
+   lang="en">
 
    <head>
       <!-- Meta Tags -->
@@ -79,7 +51,7 @@
       <!-- end preloader -->
       <!-- Start header -->
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <!-- end of header -->
       <!-- start page-title -->
@@ -239,15 +211,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>
@@ -274,6 +246,6 @@
    <!-- Custom script for this template -->
    <script src="assets/js/script.js"></script>
 </body>
-<!-- Mirrored from themexriver.com/industrial-demo/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 06:40:09 GMT -->
+<!-- Mirrored from themexriver.com/industrial-demo/shop.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 06:40:09 GMT -->
 
 </html>

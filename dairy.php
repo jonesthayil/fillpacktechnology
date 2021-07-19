@@ -2,40 +2,12 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <title> Fillpack - Food </title>
+   <title> Fillpack - Dairy </title>
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -67,128 +39,100 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
-      <section class=page-titlefood>
+      <section class=page-titledairy>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Food</h2>
+                  <h2>Dairy</h2>
                   <ol class=breadcrumb>
-                     <li><a href=index.html> </a></li>
+                     <li><a href=index.php> </a></li>
                   </ol>
                </div>
             </div>
          </div>
       </section>
-      <section class="products-section shop section-padding">
+      <section class="products-section section-padding shop">
          <div class=container>
             <div class="row products-grids">
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
                         <div class=img-holder>
-                           <img src=assets/images/product/filling-line.jpg alt class="img img-responsive">
+                           <img alt src=assets/images/product/bottle-washing-machine.jpg class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=bottle-filling-machine.html>PP/Glass Bottle Filling Machine</a></h3>
-                        <div class=rating></div>
-                        <span class=price></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-xs-6">
-                  <div class=grid>
-                     <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/bottle-washing-machine.jpg alt class="img img-responsive">
-                        </div>
-                     </div>
-                     <div class=product-info>
-                        <h3><a href=bottle-washing-machine.html>Bottle Washing Machine</a></h3>
-                        <span class=price></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-xs-6">
-                  <div class=grid>
-                     <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/augur.jpg alt class="img img-responsive">
-                        </div>
-                     </div>
-                     <div class=product-info>
-                        <h3><a href=automatic-auger-filler-with-screw-conveyor.html>Automatic Auger Filler Machine </a>
+                        <h3><a href=bottle-washing-machine.php>Bottle Washing Machine</a>
                         </h3>
                         <span class=price></span>
                      </div>
                   </div>
                </div>
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
                         <div class=img-holder>
-                           <img src=assets/images/product/cup-filling.jpg alt class="img img-responsive">
+                           <img alt src=assets/images/product/filling-line.jpg class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=automatic-curd-cup-filling-and-sealing-machine.html>Automatic Cup Filling & Sealing
-                              Machine</a></h3>
+                        <h3><a href=bottle-filling-machine.php>Bottle Filling Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
                </div>
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/double-chamber-vacuum-packing-machine.jpg alt
+                        <div class=img-holder><img alt src=assets/images/product/cup-filling.jpg
                               class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=vacuum-packing-machine.html>Vacuum Packing Machine</a></h3>
+                        <h3><a href=automatic-curd-cup-filling-and-sealing-machine.php>Automatic Curd Cup Filling And
+                              Sealing Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
                </div>
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/hopper.jpg alt class="img img-responsive">
+                        <div class=img-holder><img alt src=assets/images/product/flow.jpg class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=#>Hopper Piston Type Filling Machine</a></h3>
+                        <h3><a href=horizontal-flow-pack-packing-machine.php>Horizontal Flow Wrap Packing Machine</a>
+                        </h3>
                         <span class=price></span>
                      </div>
                   </div>
                </div>
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/flow.jpg alt class="img img-responsive">
-                        </div>
+                        <div class=img-holder><img alt src=assets/images/product/linear-conduction-sealing-machine.jpg
+                              class="img img-responsive"></div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=horizontal-flow-pack-packing-machine.html>Flow Wrap Machine</a></h3>
+                        <h3><a href=linear-conduction-sealing-machine.php>Conduction Sealing Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
                </div>
-               <div class="col col-md-4 col-xs-6">
+               <div class="col-md-4 col-xs-6">
                   <div class=grid>
                      <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/linear-conduction-sealing-machine.jpg alt
-                              class="img img-responsive">
-                        </div>
+                        <div class=img-holder><img alt
+                              src=assets/images/product/double-chamber-vacuum-packing-machine.jpg
+                              class="img img-responsive"></div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=#>Conduction Sealing Machine</a></h3>
+                        <h3>
+                           <a href=vacuum-packing-machine.php>Vacuum Packing Machine</a>
+                        </h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -197,11 +141,36 @@
                   <div class=grid>
                      <div class=img-holder-info-list>
                         <div class=img-holder>
-                           <img src=assets/images/product/hygien.jpg alt class="img img-responsive">
+                           <img alt src=assets/images/product/Paneer-press.jpg class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=#>Hygiene Station Machine </a></h3>
+                        <h3><a href=paneer-pressing-machine.php>Paneer Pressing Machine</a>
+                        </h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder><img alt src=assets/images/product/paneer-cubing-machine.jpg
+                              class="img img-responsive"></div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=paneer-cubing-machine.php>Paneer Cubing machine</a></h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder><img alt src=assets/images/product/Paneer-1.jpg
+                              class="img img-responsive"></div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=paneer-cutting-machine.php>Paneer Cutting Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -210,12 +179,79 @@
                   <div class=grid>
                      <div class=img-holder-info-list>
                         <div class=img-holder>
-                           <img src=assets/images/product/sleeve.jpg alt class="img img-responsive">
+                           <img alt src=assets/images/product/induction.jpg class="img img-responsive">
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=#>Shrink Sleeve Applicator</a></h3>
+                        <h3><a href="">Induction Sealing Machine</a></h3>
                         <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder><img alt src=assets/images/product/matka-sealing.jpg
+                              class="img img-responsive">
+                        </div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=#>Gee Sealing Machine</a>
+                        </h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder><img alt src=assets/images/product/leck.jpg class="img img-responsive">
+                        </div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=#>Leak Testing Machine</a></h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder>
+                           <img alt src=assets/images/product/sc-crp.jpg class="img img-responsive">
+                        </div>
+                     </div>
+                     <div class=product-info>
+                        <h3>
+                           <a href=#>Screw Capping Machine</a>
+                        </h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder>
+                           <img alt src=assets/images/product/gravity.jpg class="img img-responsive">
+                        </div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=#>Gravity Filling Machine</a></h3>
+                        <span class=price></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-xs-6">
+                  <div class=grid>
+                     <div class=img-holder-info-list>
+                        <div class=img-holder><img alt src=assets/images/product/hygien.jpg class="img img-responsive">
+                        </div>
+                     </div>
+                     <div class=product-info>
+                        <h3><a href=#>Hygiene Station Machine</a></h3>
+                        <span class=price>
+                        </span>
                      </div>
                   </div>
                </div>
@@ -258,15 +294,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

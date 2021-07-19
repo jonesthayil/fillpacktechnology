@@ -2,48 +2,21 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <meta name=title content="Fillpack - Pharma">
-   <meta name=description content="Fillpack technology- pharma">
+   <meta name=title content="Fillpack - Beverage">
+   <meta name=description
+      content="Fillpack Technology is Quality packaging machine for industries like farm, Pharma,Beverages,Food.">
    <meta name=keywords
-      content="liquid filling machine manufacturers, paneer cutting machine manufacturers, Web Sealer Machine">
+      content="liquid filling machine manufacturers, paneer cutting machine manufacturers, Web Sealer Machine, liquid packaging machine, liquid packaging machine, namkeen packing machine">
    <meta name=robots content="index, follow">
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
    <meta name=language content=English>
    <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-   <title> Fillpack - pharma </title>
+   <title> Fillpack - Beverage </title>
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -63,42 +36,13 @@
    <link href=assets/css/style.css rel=stylesheet>
    <link href=assets/css/mystyle.css rel=stylesheet>
    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700 Montserrat:300,400,500,600,700|Crete+Round:400italic"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Montserrat:300,400,500,600,700 Crete+Round:400italic"
       rel=stylesheet type=text/css>
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123197418-1"></script>
    <script>
       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");
    </script>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
-</head>
+   
 
 <body>
    <div class=page-wrapper>
@@ -108,16 +52,16 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
-      <section class=page-pharma>
+      <section class=page-titleCosmetics>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Pharma</h2>
+                  <h2>Cosmetic</h2>
                   <ol class=breadcrumb>
                      <li>
-                        <a href=index.html></a>
+                        <a href=index.php></a>
                      </li>
                      <li></li>
                   </ol>
@@ -136,7 +80,7 @@
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=bottle-filling-machine.html>PP/Syrup Bottle Filling Machine</a></h3>
+                        <h3><a href=bottle-filling-machine.php>Bottle Filling Machine</a></h3>
                         <div class=rating>
                         </div>
                         <span class=price></span>
@@ -151,21 +95,7 @@
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=bottle-washing-machine.html>Bottle Washing Machine</a></h3>
-                        <span class=price></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-xs-6">
-                  <div class=grid>
-                     <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/augur.jpg alt class="img img-responsive">
-                        </div>
-                     </div>
-                     <div class=product-info>
-                        <h3><a href=automatic-auger-filler-with-screw-conveyor.html>Automatic Auger Filler Machine</a>
-                        </h3>
+                        <h3><a href=bottle-washing-machine.php>Bottle Washing Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -179,20 +109,7 @@
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=linear-conduction-sealing-machine.html>Conduction Sealing Machine</a></h3>
-                        <span class=price></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-xs-6">
-                  <div class=grid>
-                     <div class=img-holder-info-list>
-                        <div class=img-holder>
-                           <img src=assets/images/product/tube.jpg alt class="img img-responsive">
-                        </div>
-                     </div>
-                     <div class=product-info>
-                        <h3><a href=tube-filling-machine.html>Tube Filling Machine</a></h3>
+                        <h3><a href=linear-conduction-sealing-machine.php>Glass Bottle Filling Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -205,7 +122,7 @@
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=web-sealing-machine.html>Web Sealer machine</a></h3>
+                        <h3><a href=web-sealing-machine>Automatic Cup Filling & Sealing Machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -218,7 +135,7 @@
                         </div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=#>Hygiene Station Machine </a></h3>
+                        <h3><a href=#>Tube Filling Machine & add in Cosmetic Page</a></h3>
                         <span class=price></span>
                      </div>
                   </div>
@@ -246,9 +163,9 @@
                         <ul class=contact-info>
                            <li><i class="fa fa-home"></i> Fillpack Technology<br> Ekveera Laghu-Udyog Sankul, Unit
                               No.14, Road No.25, Wagale Industrial Estate, Thane West - 400 604 Maharashtra, India.</li>
-                           <li><i class="fa fa-phone"></i>(+91 ) 897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
                            <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
-                           <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
+                           <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                            <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                         </ul>
                      </div>
@@ -257,15 +174,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

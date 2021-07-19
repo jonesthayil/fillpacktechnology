@@ -2,48 +2,16 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <meta name=title content="Fillpack - linear-conduction-sealing-machine">
-   <meta name=description content="Conduction Sealing Machine in Fillpack technology">
+   <title> Fillpack - Vacuum Packing Machine </title>
+   <meta name=description
+      content="Vacuum Pack Machine, Single Chamber Vacuum Packager Machine, Vacuum Packaging Machine">
    <meta name=keywords
-      content="Conduction Sealing Machine, Conduction Sealing Machine in mumbai, automatic Conduction Sealing Machine, Conduction Sealing Machine in india">
-   <meta name=robots content="index, follow">
-   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-   <meta name=language content=English>
-   <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-   <title> Fillpack - linear Conduction Sealing Machine </title>
+      content="Vacuum Pack Machine, Single Chamber Vacuum Packager Machine, Vacuum Packaging Machine, Household Mini Vacuum Sealing Machine">
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -76,15 +44,15 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <section class=page-title>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Linear Conduction Sealing Machine</h2>
+                  <h2> Vacuum Packing Machine</h2>
                   <ol class=breadcrumb>
-                     <li><a href=index.html></a></li>
+                     <li><a href=index.php></a></li>
                   </ol>
                </div>
             </div>
@@ -96,23 +64,38 @@
                <div class="col col-md-8 col-md-push-4">
                   <div class=service-single-content>
                      <div>
-                        <img src=assets/images/product/linear-conduction-sealing-machine.jpg class=extraimg alt>
+                        <img src=assets/images/product/double-chamber-vacuum-packing-machine.jpg class=extraimg alt>
+                     </div>
+                     <div class=title>
+                        <h3>Vacuum Packing Machine</h3>
                      </div>
                      <div class=details>
                         <ul>
-                           <li><i class="fa fa-arrow-right"></i> The machine is sturdy and compact in design and simple
-                              in operation.</li>
-                           <li><i class="fa fa-arrow-right"></i>It consists of one horizontal blades frame and guided by
-                              UHMW bushes and connected to pneumatic cylinder for up and down operation.</li>
-                           <li><i class="fa fa-arrow-right"></i>Another horizontal Actuator Cylinder attached with UHMW
-                              Pusher to index Paneer Accurately.</li>
-                           <li><i class="fa fa-arrow-right"></i>CAll blades and structural frame are of S.S.304</li>
-                           <li><i class="fa fa-arrow-right"></i>Poly Carbonate doors are provided for visibility of
-                              cutting material. Air Cleaning system provided with the machine.</li>
+                           <li><i class="fa fa-arrow-right"></i>Chamber Size: 600 Wide x 600 Deep x 160mm High</li>
+                           <li><i class="fa fa-arrow-right"></i>Over all dimension: 1132 x 568 x 850</li>
+                           <li><i class="fa fa-arrow-right"></i>Sealing bar lengths 440 or 640 mm as per customer’s
+                              choice.<br>
+                              Sealing bars are Operated with specially developed vacuum actuators.<br>
+                              These actuators do not require any Maintenance for years, expect oiling, Alsothese have
+                              infinite life.
+                           </li>
+                           <li><i class="fa fa-arrow-right"></i>Construction: Body MS & Chamber SS</li>
+                           <li><i class="fa fa-arrow-right"></i>Element mounting Construction Made of fibre glass to
+                              avoid short circuit when PTFE insulation tape is damaged or torn,
+                              terminal Specially developed for easy changing
+                           </li>
+                           <li> <i class="fa fa-arrow-right"></i>Operation: Controlled by Programmable Logic Controller
+                              (PLC) & push button operated by lid of the machine &automatic. Except bag filling, loading
+                              bags in chamber& lid closing </li>
+                           <li><i class="fa fa-arrow-right"></i>Packing Cycle: Vacuuming time empty chamber maximum 30,
+                              sealing 1.5 max, and cooling 5 seconds. Bag arranging time of
+                              2 to 3 seconds / bag. Vacuum time reduces when chamber is filled with product.
+                              Approximately 12 el
+                           </li>
                         </ul>
                         <h4></h4>
                         <div class=extrabtn>
-                           <a href=contact.html class="theme-btn extrabtn">Contact us</a>
+                           <a href=contact.php class="theme-btn extrabtn">Contact us</a>
                         </div>
                      </div>
                   </div>
@@ -121,20 +104,19 @@
                   <div class=service-single-sidebar>
                      <div class="services-link-widget widget">
                         <ul>
-                           <li class=current><a href=#>linear conduction sealing machine</a></li>
-                           <li><a href=paneer-cutting-machine.html>Paneer cutting machine</a></li>
-                           <li><a href=bottle-filling-machine.html>Bottle Filling Machine</a></li>
-                           <li><a href=double-chamber-vacuum-packing-machine.html>double chamber vacuum packing
-                                 machine</a></li>
-                           <li><a href=automatic-auger-filler-with-screw-conveyor.html>automatic auger filler with screw
-                                 conveyor</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.html>automatic curd cup filling
+                           <li class=current><a href=#>Double Chamber Vacuum Packing Machine</a></li>
+                           <li><a href=paneer-cutting-machine.php>Paneer cutting machine</a></li>
+                           <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a></li>
+                           <li><a href=linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
+                           <li><a href=automatic-auger-filler-with-screw-conveyor.php>automatic auger filler
+                                 Machine</a></li>
+                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>automatic curd cup filling
                                  and sealing</a></li>
-                           <li><a href=bottle-washing-machine.html>bottle washing machine</a></li>
-                           <li><a href=horizontal-flow-pack-packing-machine.html>horizontal flow pack packing
+                           <li><a href=bottle-filling-machine.php>bottle washing machine</a></li>
+                           <li><a href=horizontal-flow-pack-packing-machine.php>horizontal flow pack packing
                                  machine</a></li>
-                           <li><a href=paneer-pressing-machine.html>paneer pressing machine</a></li>
-                           <li><a href=tube-filling-machine.html>tube filling machine</a></li>
+                           <li><a href=paneer-pressing-machine.php>paneer pressing machine</a></li>
+                           <li><a href=tube-filling-machine.php> tube filling machine</a></li>
                         </ul>
                      </div>
                      <div class="widget contact-widget">
@@ -142,9 +124,9 @@
                         <div class=details>
                            <p>For any kind of query, contact us with the details below.</p>
                            <ul>
-                              <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
-                              <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li <li><i class="fa fa-envelope"></i>
-                              export@fillpacktechnology.com</li>
+                              <li><i class="fa fa-phone"></i> (+91) 897 657 7735</li>
+                              <li><i class="fa fa-phone"></i> (+91) 998 778 4735</li>
+                              <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                               <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                            </ul>
                         </div>
@@ -179,7 +161,7 @@
                               Thane West - 400 604
                               Maharashtra, India.
                            </li>
-                           <li><i class="fa fa-phone"></i>(+91 ) 897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
                            <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
                            <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                            <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
@@ -190,15 +172,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

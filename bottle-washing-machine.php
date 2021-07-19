@@ -2,48 +2,16 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <meta name=title content="Fillpack - Automatic Cup Filling And Sealing Machine">
-   <meta name=description content="Automatic Curd Cup Filling And Sealing Machine">
-   <meta name=keywords
-      content="Automatic Cup Filling Machines, Fully Automatic Sealing Machines, Filling And Sealing Machine, Cup Filling Machines, Filling And Sealing Machine, Cup Filling Machine, shrikand filling machine">
-   <meta name=robots content="index, follow">
-   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-   <meta name=language content=English>
-   <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-   <title> Fillpack - Automatic Curd Cup Filling And Sealing Machine </title>
+   <title> Fillpack - Bottle Washing Machine </title>
+   <meta name="description"
+      content=" At Fillpack technology, you’ll find a bottle washing machine precisely matched to your own requirements." />
+   <meta name="keywords"
+      content="Glass Bottle Washing Machine, Semi-Automatic Bottle Washing Machine, Glass Bottle Washing Machine in Mumbai, Glass Bottle Washing Machine in Thane, Semi-Automatic Bottle Washing Machine in thane, Semi-Automatic Bottle Washing Machine mumbai" />
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -66,37 +34,8 @@
    <link
       href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Montserrat:300,400,500,600,700|Crete+Round:400italic"
       rel=stylesheet type=text/css />
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123197418-1"></script>
    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");</script>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
 </head>
 
 <body>
@@ -107,15 +46,15 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <section class=page-title>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Automatic Curd Cup Filling And Sealing Machine</h2>
+                  <h2>Bottle Washing Machine</h2>
                   <ol class=breadcrumb>
-                     <li><a href=index.html>Home</a></li>
+                     <li><a href=index.php></a></li>
                   </ol>
                </div>
             </div>
@@ -127,26 +66,27 @@
                <div class="col col-md-8 col-md-push-4">
                   <div class=service-single-content>
                      <div>
-                        <img src=assets/images/product/cup-filling.jpg alt class=extraimg>
+                        <img src=assets/images/product/bottle-washing-machine.jpg class=extraimg alt>
                      </div>
                      <div class=title>
-                        <h3>Automatic Curd Cup Filling And Sealing Machine</h3>
+                        <h3>Bottle Washing Machine</h3>
                      </div>
                      <div class=details>
                         <ul>
-                           <li><i class="fa fa-arrow-right"></i>Cup filling machine is rotary cup filling machine for
-                              curd in plastic cups.</li>
-                           <li><i class="fa fa-arrow-right"></i>Cup filling machine is suitable for filling and lid
-                              sealing of cups.</li>
-                           <li><i class="fa fa-arrow-right"></i>Suitable to fill 50ml, 100 ml, 250ml & 500ml.</li>
-                           <li><i class="fa fa-arrow-right"></i>Automatic single head filling unit, single head foil
-                              pick-up and sealing unit with automatic ejection system.</li>
-                           <li><i class="fa fa-arrow-right"></i>SS.304/SS.316 contact parts power 415v-3, phase-50hz,
-                              heater 600w Compact model.</li>
+                           <li><i class="fa fa-arrow-right"></i>Output / Hour (bottle) 2600 to 6000 & 4300 to 9000</li>
+                           <li><i class="fa fa-arrow-right"></i>Direction of Movement: Clock Wise</li>
+                           <li><i class="fa fa-arrow-right"></i>Main Motor: 0.5 HP / 415 Volts / 50 Hz.</li>
+                           <li><i class="fa fa-arrow-right"></i>Pump Two Nos: 1 HP x 2 = 2 HP / 415 Volts / 50 HZ</li>
+                           <li><i class="fa fa-arrow-right"></i>Electric Heater: 3 Kw.</li>
+                           <li><i class="fa fa-arrow-right"></i>Tank Capacity: 75 Ltrs. S.S. 304 (2 Nos.)</li>
+                           <li><i class="fa fa-arrow-right"></i>Wash Cycle: 4 inner + 1 Outer</li>
+                           <li><i class="fa fa-arrow-right"></i>Working Heights: 860 to 910 mm</li>
+                           <li><i class="fa fa-arrow-right"></i>Machine Dimensions:(In mm) (L x W x H) 1500 x 1750 x
+                              1300</li>
                         </ul>
                         <h4></h4>
                         <div class=extrabtn>
-                           <a href=contact.html class="theme-btn extrabtn">Contact us</a>
+                           <a href=contact.php class="theme-btn extrabtn">Contact us</a>
                         </div>
                      </div>
                   </div>
@@ -155,20 +95,20 @@
                   <div class=service-single-sidebar>
                      <div class="services-link-widget widget">
                         <ul>
-                           <li class=current><a href=#>Automatic Curd Cup Filling And Sealing Machine</a></li>
-                           <li><a href=paneer-cutting-machine.html>Paneer cutting machine</a></li>
-                           <li><a href=linear-conduction-sealing-machine.html>linear conduction sealing machine</a></li>
-                           <li><a href=web-sealing-machine.html>Web Sealing Machine</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.html>Automatic Auger Filler
-                                 Machine</a></li>
-                           <li><a href=bottle-washing-machine.html>bottle washing machine</a></li>
-                           <li><a href=vacuum-packing-machine.html>vacuum packing machine</a></li>
+                           <li class=current><a href=#>Bottle Washing Machine</a></li>
+                           <li><a href=paneer-cutting-machine.php>Paneer cutting machine</a></li>
+                           <li><a href=linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
+                           <li><a href=automatic-auger-filler-with-screw-conveyor>automatic auger filler with screw
+                                 conveyor</a></li>
+                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>automatic curd cup filling
+                                 and sealing</a></li>
+                           <li><a href=bottle-washing-machine.php>bottle washing machine</a></li>
+                           <li><a href=vacuum-packing-machine.php>vacuum packing machine</a></li>
                            <li><a
-                                 href=horizontal-flow-pack-packing-machine.html>horizontal-flow-pack-packing-machine</a>
+                                 href=horizontal-flow-pack-packing-machine.php>horizontal-flow-pack-packing-machine</a>
                            </li>
-                           <li><a href=paneer-pressing-machine.html>paneer pressing machine</a></li>
-                           <li><a href=tube-filling-machine.html> tube filling machine</a></li>
-                           <li><a href=bottle-filling-machine.html>Bottle Filling Machine</a></li>
+                           <li><a href=paneer-pressing-machine.php>paneer pressing machine</a></li>
+                           <li><a href=tube-filling-machine.php>tube filling machine</a></li>
                         </ul>
                      </div>
                      <div class="widget contact-widget">
@@ -176,7 +116,7 @@
                         <div class=details>
                            <p>For any kind of query, contact us with the details below.</p>
                            <ul>
-                              <li><i class="fa fa-phone"></i> (+91 ) 897 657 7735</li>
+                              <li><i class="fa fa-phone"></i> (+91) 897 657 7735</li>
                               <li><i class="fa fa-phone"></i> (+91) 998 778 4735</li>
                               <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                               <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
@@ -213,8 +153,8 @@
                               Thane West - 400 604
                               Maharashtra, India.
                            </li>
-                           <li><i class="fa fa-phone"></i>(+91)897 657 7735</li>
-                           <li><i class="fa fa-phone"></i>(+91)897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
                            <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                            <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                         </ul>
@@ -224,15 +164,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

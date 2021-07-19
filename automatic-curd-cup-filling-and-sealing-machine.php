@@ -2,44 +2,19 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
    <meta charset=utf-8>
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
-   <title> Fillpack - Web Sealing Machine </title>
-   <META NAME="Description"
-      CONTENT="Supplier of web sealer, web sealer machine suitable for all kinds of shrink films such as pvc, pof, pp">
-   <META NAME="Keywords"
-      CONTENT="web sealer, web sealer machine, web sealer machine, web sealer machine suppliers, web sealer machine in mumbai, web sealer manufacturer in india, web sealer manufacturer in mumbai ">
+   <meta name=title content="Fillpack - Automatic Cup Filling And Sealing Machine">
+   <meta name=description content="Automatic Curd Cup Filling And Sealing Machine">
+   <meta name=keywords
+      content="Automatic Cup Filling Machines, Fully Automatic Sealing Machines, Filling And Sealing Machine, Cup Filling Machines, Filling And Sealing Machine, Cup Filling Machine, shrikand filling machine">
+   <meta name=robots content="index, follow">
+   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+   <meta name=language content=English>
+   <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
+   <title> Fillpack - Automatic Curd Cup Filling And Sealing Machine </title>
    <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
@@ -60,8 +35,11 @@
    <link href=assets/css/mystyle.css rel=stylesheet>
    <link href=assets/css/moblie.css rel=stylesheet>
    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700 Montserrat:300,400,500,600,700 Crete+Round:400italic"
-      rel=stylesheet type=text/css>
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Montserrat:300,400,500,600,700|Crete+Round:400italic"
+      rel=stylesheet type=text/css />
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123197418-1"></script>
+   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");</script>
+   
 </head>
 
 <body>
@@ -72,15 +50,15 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <section class=page-title>
          <div class=container>
             <div class=row>
                <div class="col col-xs-12">
-                  <h2>Web Sealing Machine</h2>
+                  <h2>Automatic Curd Cup Filling And Sealing Machine</h2>
                   <ol class=breadcrumb>
-                     <li><a href=index.html></a></li>
+                     <li><a href=index.php>Home</a></li>
                   </ol>
                </div>
             </div>
@@ -92,24 +70,26 @@
                <div class="col col-md-8 col-md-push-4">
                   <div class=service-single-content>
                      <div>
-                        <img src=assets/images/product/WEB-SEALING-MACHINE.jpg class=extraimg alt>
+                        <img src=assets/images/product/cup-filling.jpg alt class=extraimg>
                      </div>
                      <div class=title>
-                        <h3>Web Sealing Machine</h3>
+                        <h3>Automatic Curd Cup Filling And Sealing Machine</h3>
                      </div>
                      <div class=details>
                         <ul>
-                           <li><i class="fa fa-arrow-right"></i>Power Consumption (KW): 22KW</li>
-                           <li><i class="fa fa-arrow-right"></i>Packing dimension : 1450(L)x 550(W)x 400(H)</li>
-                           <li><i class="fa fa-arrow-right"></i>Height of conveyor (mm): 850</li>
-                           <li><i class="fa fa-arrow-right"></i>Dimension (LxWxH) (mm): 2500 x 800 x 1500</li>
-                           <li><i class="fa fa-arrow-right"></i>Air pressure : 7.5 Kg/sqcm</li>
-                           <li><i class="fa fa-arrow-right"></i>Product Packing : PP Bottle/ Glass Bottle</li>
-                           <li><i class="fa fa-arrow-right"></i>Paking Speed: 4-5 Packcts Per minutes</li>
+                           <li><i class="fa fa-arrow-right"></i>Cup filling machine is rotary cup filling machine for
+                              curd in plastic cups.</li>
+                           <li><i class="fa fa-arrow-right"></i>Cup filling machine is suitable for filling and lid
+                              sealing of cups.</li>
+                           <li><i class="fa fa-arrow-right"></i>Suitable to fill 50ml, 100 ml, 250ml & 500ml.</li>
+                           <li><i class="fa fa-arrow-right"></i>Automatic single head filling unit, single head foil
+                              pick-up and sealing unit with automatic ejection system.</li>
+                           <li><i class="fa fa-arrow-right"></i>SS.304/SS.316 contact parts power 415v-3, phase-50hz,
+                              heater 600w Compact model.</li>
                         </ul>
                         <h4></h4>
                         <div class=extrabtn>
-                           <a href=contact.html class="theme-btn extrabtn">Contact us</a>
+                           <a href=contact.php class="theme-btn extrabtn">Contact us</a>
                         </div>
                      </div>
                   </div>
@@ -118,20 +98,20 @@
                   <div class=service-single-sidebar>
                      <div class="services-link-widget widget">
                         <ul>
-                           <li class=current><a href=#>Web Sealing Machine</a></li>
-                           <li><a href=paneer-cutting-machine.html>Paneer cutting machine</a></li>
-                           <li><a href=linear-conduction-sealing-machine.html>linear conduction sealing machine</a></li>
-                           <li><a href=automatic-auger-filler-with-screw-conveyor.html>automatic auger filler
+                           <li class=current><a href=#>Automatic Curd Cup Filling And Sealing Machine</a></li>
+                           <li><a href=paneer-cutting-machine.php>Paneer cutting machine</a></li>
+                           <li><a href=linear-conduction-sealing-machine.php>linear conduction sealing machine</a></li>
+                           <li><a href=web-sealing-machine.php>Web Sealing Machine</a></li>
+                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.php>Automatic Auger Filler
                                  Machine</a></li>
-                           <li><a href=automatic-curd-cup-filling-and-sealing-machine.html>automatic curd cup filling
-                                 and sealing Machine</a></li>
-                           <li><a href=bottle-washing-machine.html>bottle washing machine</a></li>
-                           <li><a href=vacuum-packing-machine.html>vacuum packing machine</a></li>
-                           <li><a href=horizontal-flow-pack-packing-machine.html>horizontal flow pack packing
-                                 machine</a></li>
-                           <li><a href=paneer-pressing-machine.html>paneer pressing machine</a></li>
-                           <li><a href=tube-filling-machine.html> tube filling machine</a></li>
-                           <li><a href=bottle-filling-machine.html>Bottle Filling Machine</a></li>
+                           <li><a href=bottle-washing-machine.php>bottle washing machine</a></li>
+                           <li><a href=vacuum-packing-machine.php>vacuum packing machine</a></li>
+                           <li><a
+                                 href=horizontal-flow-pack-packing-machine.php>horizontal-flow-pack-packing-machine</a>
+                           </li>
+                           <li><a href=paneer-pressing-machine.php>paneer pressing machine</a></li>
+                           <li><a href=tube-filling-machine.php> tube filling machine</a></li>
+                           <li><a href=bottle-filling-machine.php>Bottle Filling Machine</a></li>
                         </ul>
                      </div>
                      <div class="widget contact-widget">
@@ -139,9 +119,9 @@
                         <div class=details>
                            <p>For any kind of query, contact us with the details below.</p>
                            <ul>
-                              <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
-                              <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li <li><i class="fa fa-envelope"></i>
-                              export@fillpacktechnology.com</li>
+                              <li><i class="fa fa-phone"></i> (+91 ) 897 657 7735</li>
+                              <li><i class="fa fa-phone"></i> (+91) 998 778 4735</li>
+                              <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                               <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                            </ul>
                         </div>
@@ -176,8 +156,8 @@
                               Thane West - 400 604
                               Maharashtra, India.
                            </li>
-                           <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
-                           <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
+                           <li><i class="fa fa-phone"></i>(+91)897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91)897 657 7735</li>
                            <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
                            <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
                         </ul>
@@ -187,15 +167,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>

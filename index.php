@@ -2,35 +2,6 @@
 <html lang=en>
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
    <meta charset=utf-8>
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
@@ -131,7 +102,7 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <!-- <section class=disclaimer>
             <div class=container>
@@ -161,7 +132,7 @@
                            cottage cheese, the wonderful aroma of paneer cooking, the precise cuts and proportion –
                            brought to you by us. In fact, we pioneered the art, invented the machine. Our unique paneer
                            cutting machines are testimony to that. When you think of us – smile.</p>
-                        <div class=btns> <a href=about.html target=_blank class=theme-btn>About us</a>
+                        <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
                         </div>
                      </div>
                   </div>
@@ -176,7 +147,7 @@
                         <p>Food packaging at its best. Clean, convenient and attractive. We bring you the safest and the
                            cleanest packaging keeping in mind your needs, ensuring that the containment is secure and of
                            the best quality. We are a part of your life even when you do not notice us overtly.</p>
-                        <div class=btns> <a href=about.html target=_blank class=theme-btn>About us</a>
+                        <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
                         </div>
                      </div>
                   </div>
@@ -193,7 +164,7 @@
                            health and that you receive your medications in the safest and most convenient packaging is a
                            way of life with us. We ensure the safety of your medicines so that you may ensure your
                            health.</p>
-                        <div class=btns> <a href=about.html target=_blank class=theme-btn>About us</a>
+                        <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
                         </div>
                      </div>
                   </div>
@@ -227,7 +198,7 @@
                            <div class=details>
                               <div class=info>
                                  <img src=assets/images/services/image3.jpg alt class=bg-image>
-                                 <a href=dairy.html>
+                                 <a href=dairy.php>
                                     <h3><i class="fi flaticon-left-quotes-sign"></i> Dairy </h3>
                                  </a>
                                  <p></p>
@@ -241,7 +212,7 @@
                            <div class=details>
                               <div class=info>
                                  <img src=assets/images/services/food1.jpg alt class=bg-image>
-                                 <a href=food.html>
+                                 <a href=food.php>
                                     <h3><i class="fi flaticon-left-quotes-sign"></i> Food </h3>
                                  </a>
                                  <p></p>
@@ -255,7 +226,7 @@
                            <div class=details>
                               <div class=info>
                                  <img src=assets/images/cosmetic.jpg alt class=bg-image>
-                                 <a href=cosmetics.html>
+                                 <a href=cosmetics.php>
                                     <h3><i class="fi flaticon-left-quotes-sign"></i> Cosmetics </h3>
                                  </a>
                                  <p></p>
@@ -269,7 +240,7 @@
                            <div class=details>
                               <div class=info>
                                  <img src=assets/images/services/pharma2.jpg alt class=bg-image>
-                                 <a href=pharma.html>
+                                 <a href=pharma.php>
                                     <h3><i class="fi flaticon-left-quotes-sign"></i> Pharma </h3>
                                  </a>
                                  <p>.</p>
@@ -283,7 +254,7 @@
                            <div class=details>
                               <div class=info>
                                  <img src=assets/images/services/image2.jpg alt class=bg-image>
-                                 <a href=Beverages.html>
+                                 <a href=Beverages.php>
                                     <h3><i class="fi flaticon-left-quotes-sign"></i> Beverage </h3>
                                  </a>
                                  <p></p>
@@ -402,7 +373,7 @@
                         Project, Ghee Jar Filling Line Machines, Curd Cup Packing Machine, Paneer Equipments, Ice Cream
                         Equipments, Milk Processing Plants, Ghee Plant, Cold Room, Hygienic Stations, Lab Furniture,
                         Bulk Milk Coolers.</p>
-                     <a href=about.html class="theme-btn read-more">Read More</a>
+                     <a href=about.php class="theme-btn read-more">Read More</a>
                   </div>
                </div>
                <div class="col col-md-8">
@@ -578,7 +549,7 @@
                      <div class=btns> <a href=# class=theme-btn-s3>Read More</a>
                      </div>
                   </div>
-                  <div w3-include-html="social.html"></div>
+                  <?php include ("social.php"); ?>
                </div>
             </div>
             <div class="col col-lg-6 col-lg-offset-1">
@@ -791,9 +762,9 @@
             </div>
          </div>
       </div>
-      <div class="contact-women wow fadeInLeft">
+      <!-- <div class="contact-women wow fadeInLeft">
          <img src=assets/images/contact-women.png alt>
-      </div>
+      </div> -->
    </section>
    <footer class=site-footer>
       <div class=upper-footer>
@@ -828,15 +799,15 @@
                   <div class="widget service-links-widget">
                      <h3>Services</h3>
                      <ul>
-                        <li><a href=dairy.html>Dairy </a>
+                        <li><a href=dairy.php>Dairy </a>
                         </li>
-                        <li><a href=food.html>Food </a>
+                        <li><a href=food.php>Food </a>
                         </li>
-                        <li><a href=beverages.html>Beverage </a>
+                        <li><a href=beverages.php>Beverage </a>
                         </li>
-                        <li><a href=pharma.html>Pharma </a>
+                        <li><a href=pharma.php>Pharma </a>
                         </li>
-                        <li><a href=cosmetics.html>Cosmetics </a>
+                        <li><a href=cosmetics.php>Cosmetics </a>
                         </li>
                      </ul>
                   </div>
@@ -861,11 +832,9 @@
          $(window).on("load",function(){setTimeout(function(){$("#subscribeModal").modal("show")},5000);setTimeout(function(){$(".subscribeModal-lg").modal("show")},10000)});$("#Reloadpage").click(function(){location.reload()});
          </script> -->
    <script type=text/javascript>
-         var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=true;a.src="https://embed.tawk.to/5b94e747afc2c34e96e85a82/default";a.charset="UTF-8";a.setAttribute("crossorigin","*");b.parentNode.insertBefore(a,b)})();
+         var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+         (function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=true;a.src="https://embed.tawk.to/5b94e747afc2c34e96e85a82/default";a.charset="UTF-8";a.setAttribute("crossorigin","*");b.parentNode.insertBefore(a,b)})();
       </script>
-   <script>
-      includeHTML();
-   </script>
    </body>
 
 </html>

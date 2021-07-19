@@ -1,1957 +1,1256 @@
-(function($) {
+(function ($) {
+  "use strict";
 
-
-
-	"use strict";
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = FUNCTIONS
 
     -------------------------------------------*/
 
-    // Check ie and version
+  // Check ie and version
 
-    function isIE () {
+  function isIE() {
+    var myNav = navigator.userAgent.toLowerCase();
 
-        var myNav = navigator.userAgent.toLowerCase();
+    return myNav.indexOf("msie") != -1
+      ? parseInt(myNav.split("msie")[1], 10)
+      : false;
+  }
 
-        return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1], 10) : false;
+  // Toggle mobile navigation
 
+  function toggleMobileNavigation() {
+    var navbar = $(".navigation-holder");
+
+    var openBtn = $(".navbar-header .open-btn");
+
+    var closeBtn = $(".navigation-holder .close-navbar");
+
+    openBtn.on("click", function () {
+      if (!navbar.hasClass("slideInn")) {
+        navbar.addClass("slideInn");
+      }
+
+      return false;
+    });
+
+    closeBtn.on("click", function () {
+      if (navbar.hasClass("slideInn")) {
+        navbar.removeClass("slideInn");
+      }
+
+      return false;
+    });
+  }
+
+  toggleMobileNavigation();
+
+  // Function for toggle a class for small menu
+
+  function toggleClassForSmallNav() {
+    var windowWidth = window.innerWidth;
+
+    var mainNav = $("#navbar > ul");
+
+    if (windowWidth <= 991) {
+      mainNav.addClass("small-nav");
+    } else {
+      mainNav.removeClass("small-nav");
     }
+  }
 
+  toggleClassForSmallNav();
 
+  // Function for small menu
 
+  function smallNavFunctionality() {
+    var windowWidth = window.innerWidth;
 
+    var mainNav = $(".navigation-holder");
 
-    // Toggle mobile navigation
+    var smallNav = $(".navigation-holder > .small-nav");
 
-    function toggleMobileNavigation() {
+    var subMenu = smallNav.find(".sub-menu");
 
-        var navbar = $(".navigation-holder");
+    var megamenu = smallNav.find(".mega-menu");
 
-        var openBtn = $(".navbar-header .open-btn");
+    var menuItemWidthSubMenu = smallNav.find(".menu-item-has-children > a");
 
-        var closeBtn = $(".navigation-holder .close-navbar");
+    if (windowWidth <= 991) {
+      subMenu.hide();
 
+      megamenu.hide();
 
+      menuItemWidthSubMenu.on("click", function (e) {
+        var $this = $(this);
 
-        openBtn.on("click", function() {
+        $this.siblings().slideToggle();
 
-            if (!navbar.hasClass("slideInn")) {
+        e.preventDefault();
 
-                navbar.addClass("slideInn");
+        e.stopImmediatePropagation();
+      });
+    } else if (windowWidth > 991) {
+      mainNav.find(".sub-menu").show();
 
-            }
-
-            return false;
-
-        })
-
-
-
-        closeBtn.on("click", function() {
-
-            if (navbar.hasClass("slideInn")) {
-
-                navbar.removeClass("slideInn");
-
-            }
-
-            return false;            
-
-        })
-
+      mainNav.find(".mega-menu").show();
     }
+  }
 
+  smallNavFunctionality();
 
+  // Parallax background
 
-    toggleMobileNavigation();
+  function bgParallax() {
+    if ($(".parallax").length) {
+      $(".parallax").each(function () {
+        var height = $(this).position().top;
 
+        var resize = height - $(window).scrollTop();
 
+        var doParallax = -(resize / 5);
 
+        var positionValue = doParallax + "px";
 
+        var img = $(this).data("bg-image");
 
-    // Function for toggle a class for small menu
+        $(this).css({
+          backgroundImage: "url(" + img + ")",
 
-    function toggleClassForSmallNav() {
+          backgroundPosition: "50%" + positionValue,
 
-        var windowWidth = window.innerWidth;
-
-        var mainNav = $("#navbar > ul");
-
-
-
-        if (windowWidth <= 991) {
-
-            mainNav.addClass("small-nav");
-
-        } else {
-
-            mainNav.removeClass("small-nav");
-
-        }
-
+          backgroundSize: "cover",
+        });
+      });
     }
+  }
 
+  // Hero slider background setting
 
+  function sliderBgSetting() {
+    if ($(".hero-slider .slide").length) {
+      $(".hero-slider .slide").each(function () {
+        var $this = $(this);
 
-    toggleClassForSmallNav();
+        var img = $this.find(".slider-bg").attr("src");
 
+        $this.css({
+          backgroundImage: "url(" + img + ")",
 
+          backgroundSize: "cover",
 
-
-
-    // Function for small menu
-
-    function smallNavFunctionality() {
-
-        var windowWidth = window.innerWidth;
-
-        var mainNav = $(".navigation-holder");
-
-        var smallNav = $(".navigation-holder > .small-nav");
-
-        var subMenu = smallNav.find(".sub-menu");
-
-        var megamenu = smallNav.find(".mega-menu");
-
-        var menuItemWidthSubMenu = smallNav.find(".menu-item-has-children > a");
-
-
-
-        if (windowWidth <= 991) {
-
-            subMenu.hide();
-
-            megamenu.hide();
-
-            menuItemWidthSubMenu.on("click", function(e) {
-
-                var $this = $(this);
-
-                $this.siblings().slideToggle();
-
-                 e.preventDefault();
-
-                e.stopImmediatePropagation();
-
-            })
-
-        } else if (windowWidth > 991) {
-
-            mainNav.find(".sub-menu").show();
-
-            mainNav.find(".mega-menu").show();
-
-        }
-
+          backgroundPosition: "center center",
+        });
+      });
     }
+  }
 
+  //Setting hero slider
 
+  function heroSlider() {
+    if ($(".hero-slider").length) {
+      $(".hero-slider").slick({
+        autoplay: true,
 
-    smallNavFunctionality();
+        autoplaySpeed: 6000,
 
+        pauseOnHover: true,
 
+        arrows: true,
 
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
 
+        nextArrow: '<button type="button" class="slick-next">Next</button>',
 
-    // Parallax background
+        dots: true,
 
-    function bgParallax() {
+        fade: true,
 
-        if ($(".parallax").length) {
-
-            $(".parallax").each(function() {
-
-                var height = $(this).position().top;
-
-                var resize     = height - $(window).scrollTop();
-
-                var doParallax = -(resize/5);
-
-                var positionValue   = doParallax + "px";
-
-                var img = $(this).data("bg-image");
-
-
-
-                $(this).css({
-
-                    backgroundImage: "url(" + img + ")",
-
-                    backgroundPosition: "50%" + positionValue,
-
-                    backgroundSize: "cover"
-
-                });
-
-            });
-
-        }
-
+        cssEase: "linear",
+      });
     }
+  }
 
+  //Take grid image and make it bg
 
+  function makeBg($selector) {
+    var selector = $selector;
 
+    selector.each(function () {
+      var $this = $(this),
+        bgImage = $this.find(".bg-image"),
+        bgImageSrc = bgImage.attr("src");
 
+      bgImage.hide();
 
-    // Hero slider background setting
+      $this.css({
+        backgroundImage: "url(" + bgImageSrc + ")",
 
-    function sliderBgSetting() {
+        backgroundSize: "cover",
 
-        if ($(".hero-slider .slide").length) {
+        backgroundRepeat: "no-repeat",
+      });
+    });
+  }
 
-            $(".hero-slider .slide").each(function() {
-
-                var $this = $(this);
-
-                var img = $this.find(".slider-bg").attr("src");
-
-
-
-                $this.css({
-
-                    backgroundImage: "url("+ img +")",
-
-                    backgroundSize: "cover",
-
-                    backgroundPosition: "center center"
-
-                })
-
-            });
-
-        }
-
-    }
-
-
-
-
-
-    //Setting hero slider
-
-    function heroSlider() {
-
-        if ($(".hero-slider").length) {
-
-            $(".hero-slider").slick({
-
-                autoplay: true,
-
-                autoplaySpeed: 6000,
-
-                pauseOnHover: true,
-
-                arrows: true,
-
-                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-
-                nextArrow: '<button type="button" class="slick-next">Next</button>',
-
-                dots: true,
-
-                fade: true,
-
-                cssEase: 'linear'
-
-            });
-
-        }
-
-    }
-
-    
-
-    //Take grid image and make it bg
-
-    function makeBg($selector) {
-
-        var selector = $selector;
-
-        
-
-        selector.each(function() {
-
-            var $this = $(this),
-
-                bgImage = $this.find(".bg-image"),
-
-                bgImageSrc = bgImage.attr("src");
-
-            
-
-            bgImage.hide();
-
-            
-
-            $this.css({
-
-                backgroundImage: "url(" + bgImageSrc + ")",
-
-                backgroundSize: "cover",
-
-                backgroundRepeat: "no-repeat",
-
-            })
-
-        })
-
-    }
-
-    
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = HIDE PRELOADER
 
     -------------------------------------------*/
 
-    function preloader() {
+  function preloader() {
+    if ($(".preloader").length) {
+      $(".preloader")
+        .delay(100)
+        .fadeOut(500, function () {
+          //active wow
 
-        if($('.preloader').length) {
+          wow.init();
 
-            $('.preloader').delay(100).fadeOut(500, function() {
+          //Active heor slider
 
-
-
-                //active wow
-
-                wow.init();
-
-
-
-                //Active heor slider
-
-                heroSlider();
-
-
-
-            });
-
-        }
-
+          heroSlider();
+        });
     }
+  }
 
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = WOW ANIMATION SETTING
 
     -------------------------------------------*/
 
-    var wow = new WOW({
+  var wow = new WOW({
+    boxClass: "wow", // default
 
-        boxClass:     'wow',      // default
+    animateClass: "animated", // default
 
-        animateClass: 'animated', // default
+    offset: 0, // default
 
-        offset:       0,          // default
+    mobile: true, // default
 
-        mobile:       true,       // default
+    live: true, // default
+  });
 
-        live:         true        // default
-
-    });
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = ACTIVE POPUP IMAGE
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if ($(".fancybox").length) {
+  if ($(".fancybox").length) {
+    $(".fancybox").fancybox({
+      openEffect: "elastic",
 
-        $(".fancybox").fancybox({
+      closeEffect: "elastic",
 
-            openEffect  : "elastic",
+      wrapCSS: "project-fancybox-title-style",
+    });
+  }
 
-            closeEffect : "elastic",
-
-            wrapCSS     : "project-fancybox-title-style"
-
-        });
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = POPUP VIDEO
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if ($(".video-btn").length) {
+  if ($(".video-btn").length) {
+    $(".video-btn").on("click", function () {
+      $.fancybox({
+        href: this.href,
 
-        $(".video-btn").on("click", function(){
+        type: $(this).data("type"),
 
-            $.fancybox({
+        title: this.title,
 
-                href: this.href,
+        helpers: {
+          title: { type: "inside" },
 
-                type: $(this).data("type"),
+          media: {},
+        },
 
-                'title'         : this.title,
+        beforeShow: function () {
+          $(".fancybox-wrap").addClass("gallery-fancybox");
+        },
+      });
 
-                helpers     : {  
+      return false;
+    });
+  }
 
-                    title : { type : 'inside' },
-
-                    media : {}
-
-                },
-
-
-
-                beforeShow : function(){
-
-                    $(".fancybox-wrap").addClass("gallery-fancybox");
-
-                }
-
-            });
-
-            return false
-
-        });    
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = ACTIVE GALLERY POPUP IMAGE
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if ($(".popup-gallery").length) {
+  if ($(".popup-gallery").length) {
+    $(".popup-gallery").magnificPopup({
+      delegate: "a",
 
-        $('.popup-gallery').magnificPopup({
+      type: "image",
 
-            delegate: 'a',
+      gallery: {
+        enabled: true,
+      },
 
-            type: 'image',
+      zoom: {
+        enabled: true,
 
+        duration: 300,
 
+        easing: "ease-in-out",
 
-            gallery: {
+        opener: function (openerElement) {
+          return openerElement.is("img")
+            ? openerElement
+            : openerElement.find("img");
+        },
+      },
+    });
+  }
 
-              enabled: true
-
-            },
-
-
-
-            zoom: {
-
-                enabled: true,
-
-
-
-                duration: 300,
-
-                easing: 'ease-in-out',
-
-                opener: function(openerElement) {
-
-                    return openerElement.is('img') ? openerElement : openerElement.find('img');
-
-                }
-
-            }
-
-        });    
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = FUNCTION FORM SORTING GALLERY
 
     -------------------------------------------*/
 
-    function sortingGallery() {
+  function sortingGallery() {
+    if ($(".sortable-gallery .gallery-filters").length) {
+      var $container = $(".gallery-container");
 
-        if ($(".sortable-gallery .gallery-filters").length) {
+      $container.isotope({
+        filter: "*",
 
-            var $container = $('.gallery-container');
+        animationOptions: {
+          duration: 750,
 
-            $container.isotope({
+          easing: "linear",
 
-                filter:'*',
+          queue: false,
+        },
+      });
 
-                animationOptions: {
+      $(".gallery-filters li a").on("click", function () {
+        $(".gallery-filters li .current").removeClass("current");
 
-                    duration: 750,
+        $(this).addClass("current");
 
-                    easing: 'linear',
+        var selector = $(this).attr("data-filter");
 
-                    queue: false,
+        $container.isotope({
+          filter: selector,
 
-                }
+          animationOptions: {
+            duration: 750,
 
-            });
+            easing: "linear",
 
+            queue: false,
+          },
+        });
 
-
-            $(".gallery-filters li a").on("click", function() {
-
-                $('.gallery-filters li .current').removeClass('current');
-
-                $(this).addClass('current');
-
-                var selector = $(this).attr('data-filter');
-
-                $container.isotope({
-
-                    filter:selector,
-
-                    animationOptions: {
-
-                        duration: 750,
-
-                        easing: 'linear',
-
-                        queue: false,
-
-                    }
-
-                });
-
-                return false;
-
-            });
-
-        }
-
+        return false;
+      });
     }
+  }
 
+  sortingGallery();
 
-
-    sortingGallery(); 
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = MASONRY GALLERY SETTING
 
     -------------------------------------------*/
 
-    function masonryGridSetting() {
+  function masonryGridSetting() {
+    if ($(".masonry-gallery").length) {
+      var $grid = $(".masonry-gallery").masonry({
+        itemSelector: ".grid-item",
 
-        if ($('.masonry-gallery').length) {
+        columnWidth: ".grid-item",
 
-            var $grid =  $('.masonry-gallery').masonry({
+        percentPosition: true,
+      });
 
-                itemSelector: '.grid-item',
-
-                columnWidth: '.grid-item',
-
-                percentPosition: true
-
-            });
-
-
-
-            $grid.imagesLoaded().progress( function() {
-
-                $grid.masonry('layout');
-
-            });
-
-        }
-
+      $grid.imagesLoaded().progress(function () {
+        $grid.masonry("layout");
+      });
     }
+  }
 
-
-
-	
-
-	
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = STICKY HEADER
 
     -------------------------------------------*/
 
+  // Function for clone an element for sticky menu
 
+  function cloneNavForSticyMenu($ele, $newElmClass) {
+    $ele
+      .addClass("original")
+      .clone()
+      .insertAfter($ele)
+      .addClass($newElmClass)
+      .removeClass("original");
+  }
 
-    // Function for clone an element for sticky menu
+  // clone home style 1 navigation for sticky menu
 
-    function cloneNavForSticyMenu($ele, $newElmClass) {
+  if ($(".site-header .navigation").length) {
+    cloneNavForSticyMenu($(".site-header .navigation"), "sticky-header");
+  }
 
-        $ele.addClass('original').clone().insertAfter($ele).addClass($newElmClass).removeClass('original');
+  // Function for sticky menu
 
+  function stickIt($stickyClass, $toggleClass) {
+    if ($(window).scrollTop() >= 300) {
+      var orgElement = $(".original");
+
+      var coordsOrgElement = orgElement.offset();
+
+      var leftOrgElement = coordsOrgElement.left;
+
+      var widthOrgElement = orgElement.css("width");
+
+      $stickyClass.addClass($toggleClass);
+
+      $stickyClass
+        .css({
+          width: widthOrgElement,
+        })
+        .show();
+
+      $(".original").css({
+        visibility: "hidden",
+      });
+    } else {
+      $(".original").css({
+        visibility: "visible",
+      });
+
+      $stickyClass.removeClass($toggleClass);
     }
+  }
 
-
-
-    // clone home style 1 navigation for sticky menu
-
-    if ($('.site-header .navigation').length) {
-
-        cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
-
-    }
-
-
-
-    // Function for sticky menu
-
-    function stickIt($stickyClass, $toggleClass) {
-
-
-
-        if ($(window).scrollTop() >= 300) {
-
-            var orgElement = $(".original");
-
-            var coordsOrgElement = orgElement.offset();
-
-            var leftOrgElement = coordsOrgElement.left;  
-
-            var widthOrgElement = orgElement.css("width");
-
-
-
-            $stickyClass.addClass($toggleClass);
-
-
-
-            $stickyClass.css({
-
-                "width": widthOrgElement
-
-            }).show();
-
-
-
-            $(".original").css({
-
-                "visibility": "hidden"
-
-            });
-
-
-
-        } else {
-
-
-
-            $(".original").css({
-
-                "visibility": "visible"
-
-            });
-
-
-
-            $stickyClass.removeClass($toggleClass);
-
-        }
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = Header shopping cart toggle
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".mini-cart").length) {
+  if ($(".mini-cart").length) {
+    var cartToggleBtn = $(".cart-toggle-btn");
 
-        var cartToggleBtn = $(".cart-toggle-btn");
+    var cartContent = $(".top-cart-content");
 
-        var cartContent = $(".top-cart-content");
+    var body = $("body");
 
-        var body = $("body");
+    cartToggleBtn.on("click", function (e) {
+      cartContent.toggleClass("top-cart-content-toggle");
 
+      e.stopPropagation();
+    });
 
+    body
+      .on("click", function () {
+        cartContent.removeClass("top-cart-content-toggle");
+      })
+      .find(cartContent)
+      .on("click", function (e) {
+        e.stopPropagation();
+      });
+  }
 
-        cartToggleBtn.on("click", function(e) {
-
-            cartContent.toggleClass("top-cart-content-toggle");
-
-            e.stopPropagation();
-
-        });
-
-
-
-        body.on("click", function() {
-
-            cartContent.removeClass("top-cart-content-toggle");
-
-        }).find(cartContent).on("click", function(e) {
-
-            e.stopPropagation();
-
-        });
-
-    }
-
-    
-
-    
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = service slider
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".service-slider".length)) {
+  if ($(".service-slider".length)) {
+    $(".service-slider").owlCarousel({
+      autoplay: true,
 
-        $(".service-slider").owlCarousel({
+      mouseDrag: false,
 
-            autoplay:true,
+      smartSpeed: 300,
 
-            mouseDrag: false,
+      margin: 30,
 
-            smartSpeed: 300,
+      loop: true,
 
-            margin: 30,
+      autoplayHoverPause: true,
 
-            loop:true,
+      responsive: {
+        0: {
+          items: 1,
+        },
 
-            autoplayHoverPause:true,
+        600: {
+          items: 2,
+        },
 
-            responsive: {
+        992: {
+          items: 3,
+        },
+      },
+    });
+  }
 
-                0 : {
-
-                    items: 1
-
-                },
-
-
-
-                600 : {
-
-                    items: 2
-
-                },
-
-
-
-                992 : {
-
-                    items: 3
-
-                }
-
-            }
-
-        });
-
-    }
-
-    
-
-    
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = Testimonials slider
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".testimonials-slider".length)) {
+  if ($(".testimonials-slider".length)) {
+    $(".testimonials-slider").owlCarousel({
+      //autoplay: true,
 
-        $(".testimonials-slider").owlCarousel({
+      mouseDrag: true,
 
-            //autoplay: true,
+      smartSpeed: 1000,
 
-            mouseDrag: true,
+      loop: true,
 
-            smartSpeed: 1000,
+      autoplayHoverPause: true,
 
-            loop:true,
+      items: 1,
 
-            autoplayHoverPause:true,
+      dots: false,
 
-            items: 1,
+      nav: true,
 
-            dots: false,
+      navText: [
+        '<i class="fa fa-angle-left"></i>',
+        '<i class="fa fa-angle-right"></i>',
+      ],
+    });
+  }
 
-            nav: true,
-
-            navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
-
-        });
-
-    }
-
-
-
-
-
-    /*-------------------------------------------------------
+  /*-------------------------------------------------------
 
         = Function for setting horizental overflow scroolbar
 
-    --------------------------------------------------------*/  
+    --------------------------------------------------------*/
 
-    function setMcustomScrollBar($selector) {
+  function setMcustomScrollBar($selector) {
+    var selector = $selector,
+      windowWidth = window.innerWidth;
 
-        var selector = $selector,
+    if (selector.length && windowWidth >= 768) {
+      selector.addClass("mCustomScrollbar _mCS_1");
 
-            windowWidth = window.innerWidth;
+      selector.mCustomScrollbar({
+        axis: "x",
 
+        advanced: {
+          autoExpandHorizontalScroll: true,
+        },
 
+        mouseWheel: "disable",
+      });
+    } else {
+      selector.removeClass("mCustomScrollbar _mCS_1");
 
-        if((selector.length) && (windowWidth >= 768)) {
-
-            selector.addClass("mCustomScrollbar _mCS_1");
-
-            selector.mCustomScrollbar({
-
-                axis:"x",
-
-                advanced:{
-
-                    autoExpandHorizontalScroll: true
-
-                },
-
-                mouseWheel: "disable"
-
-            });
-
-        } else {
-
-            selector.removeClass("mCustomScrollbar _mCS_1");
-
-            selector.mCustomScrollbar("destroy");
-
-        }
-
+      selector.mCustomScrollbar("destroy");
     }
+  }
 
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = Partners slider
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".partners-slider".length)) {
+  if ($(".partners-slider".length)) {
+    $(".partners-slider").owlCarousel({
+      autoplay: true,
 
-        $(".partners-slider").owlCarousel({
+      smartSpeed: 300,
 
-            autoplay:true,
+      margin: 30,
 
-            smartSpeed: 300,
+      loop: true,
 
-            margin: 30,
+      autoplayHoverPause: true,
 
-            loop:true,
+      dots: false,
 
-            autoplayHoverPause:true,
+      responsive: {
+        0: {
+          items: 2,
+        },
 
-            dots: false,
+        600: {
+          items: 3,
+        },
 
-            responsive: {
+        992: {
+          items: 4,
+        },
+      },
+    });
+  }
 
-                0 : {
-
-                    items: 2
-
-                },
-
-
-
-                600 : {
-
-                    items: 3
-
-                },
-
-
-
-                992 : {
-
-                    items: 4
-
-                }
-
-            }
-
-        });
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = team slider
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".team-slider".length)) {
+  if ($(".team-slider".length)) {
+    $(".team-slider").owlCarousel({
+      // autoplay:true,
 
-        $(".team-slider").owlCarousel({
+      smartSpeed: 300,
 
-            // autoplay:true,
+      margin: 30,
 
-            smartSpeed: 300,
+      loop: true,
 
-            margin: 30,
+      autoplayHoverPause: true,
 
-            loop:true,
+      nav: true,
 
-            autoplayHoverPause:true,
+      navText: [
+        '<i class="fa fa-arrow-left">',
+        '<i class="fa fa-arrow-right">',
+      ],
 
-            nav: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
 
-            navText: ['<i class="fa fa-arrow-left">','<i class="fa fa-arrow-right">'],
+        450: {
+          items: 2,
+        },
 
-            responsive: {
+        700: {
+          items: 3,
+        },
+      },
+    });
+  }
 
-                0 : {
-
-                    items: 1
-
-                },
-
-
-
-                450 : {
-
-                    items: 2
-
-                },
-
-
-
-                700 : {
-
-                    items: 3
-
-                }
-
-            }
-
-        });
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = FAN FACT COUNT
 
     -------------------------------------------*/
 
-    if ($(".start-count").length) {
+  if ($(".start-count").length) {
+    $(".counter").appear();
 
-        $('.counter').appear();
+    $(document.body).on("appear", ".counter", function (e) {
+      var $this = $(this),
+        countTo = $this.attr("data-count");
 
-        $(document.body).on('appear', '.counter', function(e) {
+      $({ countNum: $this.text() }).animate(
+        {
+          countNum: countTo,
+        },
+        {
+          duration: 3000,
 
-            var $this = $(this),
+          easing: "linear",
 
-            countTo = $this.attr('data-count');
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
 
+          complete: function () {
+            $this.text(this.countNum);
+          },
+        }
+      );
+    });
+  }
 
-
-            $({ countNum: $this.text()}).animate({
-
-                countNum: countTo
-
-            }, {
-
-                duration: 3000,
-
-                easing:'linear',
-
-                step: function() {
-
-                    $this.text(Math.floor(this.countNum));
-
-                },
-
-                complete: function() {
-
-                    $this.text(this.countNum);
-
-                }
-
-            });
-
-        });
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = Testimonials slider
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if($(".testimoials-s2-slider".length)) {
+  if ($(".testimoials-s2-slider".length)) {
+    $(".testimoials-s2-slider").owlCarousel({
+      autoplay: true,
 
-        $(".testimoials-s2-slider").owlCarousel({
+      smartSpeed: 300,
 
-            autoplay:true,
+      margin: 30,
 
-            smartSpeed: 300,
+      loop: true,
 
-            margin: 30,
+      autoplayHoverPause: true,
 
-            loop:true,
+      nav: true,
 
-            autoplayHoverPause:true,
+      navText: [
+        '<i class="fa fa-arrow-left">',
+        '<i class="fa fa-arrow-right">',
+      ],
 
-            nav: true,
+      dots: false,
 
-            navText: ['<i class="fa fa-arrow-left">','<i class="fa fa-arrow-right">'],
+      responsive: {
+        0: {
+          items: 1,
+        },
 
-            dots: false,
+        768: {
+          items: 2,
+        },
+      },
+    });
+  }
 
-            responsive: {
-
-                0 : {
-
-                    items: 1
-
-                },
-
-
-
-                768 : {
-
-                    items: 2
-
-                }
-
-            }
-
-        });
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = SHOP RANGE SLIDER
 
     -------------------------------------------*/
 
-    if ($("#range").length) {
+  if ($("#range").length) {
+    $("#range").slider({
+      min: 50,
 
-        $("#range").slider({
+      max: 1000,
 
-            min: 50,
+      value: [85, 300],
 
-            max: 1000,
+      tooltip: "hide",
+    });
 
-            value: [85, 300],
+    $("#range").on("slide", function (v1) {
+      $("#min-value").text("$" + v1.value[0]);
 
-            tooltip: "hide"
+      $("#max-value").text("$" + v1.value[1]);
+    });
+  }
 
-        });
-
-
-
-        $("#range").on("slide", function(v1) {
-
-            $("#min-value").text("$" + v1.value[0]);
-
-            $("#max-value").text("$" + v1.value[1]);
-
-        });
-
-    }
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = SHOP DETAILS PRODUCT SLIDER
 
     -------------------------------------------*/
 
-    if ($(".shop-single-slider-wrapper").length) {
+  if ($(".shop-single-slider-wrapper").length) {
+    $(".slider-for").slick({
+      slidesToShow: 1,
 
-        $('.slider-for').slick({
+      slidesToScroll: 1,
 
-            slidesToShow: 1,
+      arrows: false,
 
-            slidesToScroll: 1,
+      fade: true,
 
-            arrows: false,
+      asNavFor: ".slider-nav",
+    });
 
-            fade: true,
+    $(".slider-nav").slick({
+      slidesToShow: 4,
 
-            asNavFor: '.slider-nav'
+      slidesToScroll: 1,
 
-        });
+      asNavFor: ".slider-for",
 
-        $('.slider-nav').slick({
+      focusOnSelect: true,
 
-            slidesToShow: 4,
+      prevArrow: '<i class="nav-btn nav-btn-lt fa fa-long-arrow-left"></i>',
 
-            slidesToScroll: 1,
+      nextArrow: '<i class="nav-btn nav-btn-rt fa fa-long-arrow-right"></i>',
 
-            asNavFor: '.slider-for',
+      responsive: [
+        {
+          breakpoint: 500,
 
-            focusOnSelect: true,
+          settings: {
+            slidesToShow: 3,
 
-            prevArrow: '<i class="nav-btn nav-btn-lt fa fa-long-arrow-left"></i>',
+            infinite: true,
+          },
+        },
+      ],
+    });
+  }
 
-            nextArrow: '<i class="nav-btn nav-btn-rt fa fa-long-arrow-right"></i>',
+  // Bootstrap touchspin for product details page
 
+  if ($("input[name='count-product']").length) {
+    $("input[name='count-product']").TouchSpin({
+      verticalbuttons: true,
+    });
+  }
 
+  //Recent proejct horizental scroolbar
 
-            responsive: [
+  if ($(".recent-projects-grids").length) {
+    setMcustomScrollBar($(".recent-projects-grids"));
+  }
 
-                {
-
-                  breakpoint: 500,
-
-                  settings: {
-
-                    slidesToShow: 3,
-
-                    infinite: true
-
-                  }
-
-                }
-
-            ]
-
-
-
-        });
-
-    }
-
-    
-
-
-
-    // Bootstrap touchspin for product details page
-
-    if ($("input[name='count-product']").length) {
-
-        $("input[name='count-product']").TouchSpin({
-
-            verticalbuttons: true
-
-        });
-
-    }
-
-
-
-    //Recent proejct horizental scroolbar
-
-    if($(".recent-projects-grids").length) {
-
-        setMcustomScrollBar($(".recent-projects-grids"));
-
-    }
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = BACK TO TOP BTN SETTING
 
     -------------------------------------------*/
 
-    $("body").append("<a href='#' class='back-to-top'><i class='fa fa-angle-up'></i></a>");
+  $("body").append(
+    "<a href='#' class='back-to-top'><i class='fa fa-angle-up'></i></a>"
+  );
 
+  function toggleBackToTopBtn() {
+    var amountScrolled = 300;
 
-
-    function toggleBackToTopBtn() {
-
-        var amountScrolled = 300;
-
-        if ($(window).scrollTop() > amountScrolled) {
-
-            $("a.back-to-top").fadeIn("slow");
-
-        } else {
-
-            $("a.back-to-top").fadeOut("slow");
-
-        }
-
+    if ($(window).scrollTop() > amountScrolled) {
+      $("a.back-to-top").fadeIn("slow");
+    } else {
+      $("a.back-to-top").fadeOut("slow");
     }
+  }
 
+  $(".back-to-top").on("click", function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      700
+    );
 
+    return false;
+  });
 
-    $(".back-to-top").on("click", function() {
-
-        $("html,body").animate({
-
-            scrollTop: 0
-
-        }, 700);
-
-        return false;
-
-    })
-
-
-
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = GOOGLE MAP
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    function map() {
+  function map() {
+    var locations = [
+      ["Hotel royal international khulna ", 22.8103888, 89.5619609, 1],
 
+      ["City inn khulna", 22.820884, 89.551216, 2],
+    ];
 
+    var map = new google.maps.Map(document.getElementById("map"), {
+      center: new google.maps.LatLng(22.8103888, 89.5619609),
 
-        var locations = [
+      zoom: 12,
 
-            ['Hotel royal international khulna ', 22.8103888, 89.5619609,1],
+      scrollwheel: false,
 
-            ['City inn khulna', 22.820884, 89.551216,2],
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    });
 
-        ];
+    var infowindow = new google.maps.InfoWindow();
 
+    var marker, i;
 
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map: map,
 
-            center: new google.maps.LatLng( 22.8103888, 89.5619609),
+        icon: "assets/images/map-marker.png",
+      });
 
-            zoom: 12,
+      google.maps.event.addListener(
+        marker,
+        "click",
+        (function (marker, i) {
+          return function () {
+            infowindow.setContent(locations[i][0]);
 
-            scrollwheel: false,
+            infowindow.open(map, marker);
+          };
+        })(marker, i)
+      );
+    }
 
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+    map.set(
+      "styles",
 
+      [
+        {
+          featureType: "administrative",
 
+          elementType: "labels.text.fill",
 
-        });
+          stylers: [
+            {
+              color: "#fdc900",
+            },
+          ],
+        },
 
+        {
+          featureType: "landscape",
 
+          elementType: "all",
 
-        var infowindow = new google.maps.InfoWindow();
+          stylers: [
+            {
+              color: "#f2f2f2",
+            },
+          ],
+        },
 
+        {
+          featureType: "poi",
 
+          elementType: "all",
 
-        var marker, i;
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
 
+        {
+          featureType: "road",
 
+          elementType: "all",
 
-        for (i = 0; i < locations.length; i++) {  
+          stylers: [
+            {
+              saturation: -100,
+            },
 
-                marker = new google.maps.Marker({
+            {
+              lightness: 45,
+            },
+          ],
+        },
 
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-
-                map: map,
-
-                icon:'assets/images/map-marker.png'
-
-            });
-
-
-
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
-
-                return function() {
-
-                    infowindow.setContent(locations[i][0]);
-
-                    infowindow.open(map, marker);
-
-                }
-
-            })(marker, i));
-
-        }
-
-
-
-        map.set('styles',
-
-
-
-            [
-
-                {
-
-                    "featureType": "administrative",
-
-                    "elementType": "labels.text.fill",
-
-                    "stylers": [
-
-                        {
-
-                            "color": "#fdc900"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "landscape",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "color": "#f2f2f2"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "poi",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "visibility": "off"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "road",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "saturation": -100
-
-                        },
-
-                        {
-
-                            "lightness": 45
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "road.highway",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "visibility": "simplified"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "road.arterial",
-
-                    "elementType": "labels.icon",
-
-                    "stylers": [
-
-                        {
-
-                            "visibility": "off"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "transit",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "visibility": "off"
-
-                        }
-
-                    ]
-
-                },
-
-                {
-
-                    "featureType": "water",
-
-                    "elementType": "all",
-
-                    "stylers": [
-
-                        {
-
-                            "color": "#fdc900"
-
-                        },
-
-                        {
-
-                            "visibility": "on"
-
-                        }
-
-                    ]
-
-                }
-
-            ]
-
-        );
-
-
-
-    }; 
-
-
-
-
-
-    /*------------------------------------------
+        {
+          featureType: "road.highway",
+
+          elementType: "all",
+
+          stylers: [
+            {
+              visibility: "simplified",
+            },
+          ],
+        },
+
+        {
+          featureType: "road.arterial",
+
+          elementType: "labels.icon",
+
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+
+        {
+          featureType: "transit",
+
+          elementType: "all",
+
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+
+        {
+          featureType: "water",
+
+          elementType: "all",
+
+          stylers: [
+            {
+              color: "#fdc900",
+            },
+
+            {
+              visibility: "on",
+            },
+          ],
+        },
+      ]
+    );
+  }
+
+  /*------------------------------------------
 
         = CONTACT FORM SUBMISSION
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    if ($("#contact-form").length) {
+  if ($("#contact-form").length) {
+    $("#contact-form").validate({
+      rules: {
+        name: {
+          required: true,
 
-        $("#contact-form").validate({
+          minlength: 2,
+        },
 
-            rules: {
+        email: "required",
 
-                name: {
+        phone: "required",
 
-                    required: true,
+        select: "required",
+      },
 
-                    minlength: 2
+      messages: {
+        name: "Please enter your name",
 
-                },
+        email: "Please enter your email",
 
+        phone: "Please enter your phone",
 
+        select: "Select an item",
+      },
 
-                email: "required",
+      submitHandler: function (form) {
+        $.ajax({
+          type: "POST",
 
+          url: "mail.php",
 
+          data: $(form).serialize(),
 
-                phone: "required",
+          success: function () {
+            $("#loader").hide();
 
+            $("#success").slideDown("slow");
 
+            setTimeout(function () {
+              $("#success").slideUp("slow");
+            }, 3000);
 
-                select: "required",
+            form.reset();
+          },
 
-            },
+          error: function () {
+            $("#loader").hide();
 
+            $("#error").slideDown("slow");
 
-
-            messages: {
-
-                name: "Please enter your name",
-
-                email: "Please enter your email",
-
-                phone: "Please enter your phone",
-
-                select: "Select an item"
-
-            },
-
-
-
-            submitHandler: function (form) {
-
-                $.ajax({
-
-                    type: "POST",
-
-                    url: "mail.php",
-
-                    data: $(form).serialize(),
-
-                    success: function () {
-
-                        $( "#loader").hide();
-
-                        $( "#success").slideDown( "slow" );
-
-                        setTimeout(function() {
-
-                        $( "#success").slideUp( "slow" );
-
-                        }, 3000);
-
-                        form.reset();
-
-                    },
-
-                    error: function() {
-
-                        $( "#loader").hide();
-
-                        $( "#error").slideDown( "slow" );
-
-                        setTimeout(function() {
-
-                        $( "#error").slideUp( "slow" );
-
-                        }, 3000);
-
-                    }
-
-                });
-
-                return false; // required to block normal submit since you used ajax
-
-            }
-
-
-
+            setTimeout(function () {
+              $("#error").slideUp("slow");
+            }, 3000);
+          },
         });
 
-    }
+        return false; // required to block normal submit since you used ajax
+      },
+    });
+  }
 
+  // Contact page form
 
+  if ($("#contact-form-s2").length) {
+    $("#contact-form-s2").validate({
+      rules: {
+        f_name: {
+          required: true,
 
-    // Contact page form
+          minlength: 2,
+        },
 
-    if ($("#contact-form-s2").length) {
+        l_name: {
+          required: true,
 
-        $("#contact-form-s2").validate({
+          minlength: 2,
+        },
 
-            rules: {
+        email: "required",
 
-                f_name: {
+        phone: "required",
+      },
 
-                    required: true,
+      messages: {
+        f_name: "Please enter your First name",
 
-                    minlength: 2
+        l_name: "Please enter your Last name",
 
-                },
+        email: "Please enter your email",
 
+        phone: "Please enter your phone",
+      },
 
+      submitHandler: function (form) {
+        $.ajax({
+          type: "POST",
 
-                l_name: {
+          url: "mail-2.php",
 
-                    required: true,
+          data: $(form).serialize(),
 
-                    minlength: 2
+          success: function () {
+            $("#loader").hide();
 
-                },
+            $("#success").slideDown("slow");
 
+            setTimeout(function () {
+              $("#success").slideUp("slow");
+            }, 3000);
 
+            form.reset();
+          },
 
-                email: "required",
+          error: function () {
+            $("#loader").hide();
 
+            $("#error").slideDown("slow");
 
-
-                phone: "required",
-
-
-
-            },
-
-
-
-            messages: {
-
-                f_name: "Please enter your First name",
-
-                l_name: "Please enter your Last name",
-
-                email: "Please enter your email",
-
-                phone: "Please enter your phone",
-
-            },
-
-
-
-            submitHandler: function (form) {
-
-                $.ajax({
-
-                    type: "POST",
-
-                    url: "mail-2.php",
-
-                    data: $(form).serialize(),
-
-                    success: function () {
-
-                        $( "#loader").hide();
-
-                        $( "#success").slideDown( "slow" );
-
-                        setTimeout(function() {
-
-                        $( "#success").slideUp( "slow" );
-
-                        }, 3000);
-
-                        form.reset();
-
-                    },
-
-                    error: function() {
-
-                        $( "#loader").hide();
-
-                        $( "#error").slideDown( "slow" );
-
-                        setTimeout(function() {
-
-                        $( "#error").slideUp( "slow" );
-
-                        }, 3000);
-
-                    }
-
-                });
-
-                return false; // required to block normal submit since you used ajax
-
-            }
-
-
-
+            setTimeout(function () {
+              $("#error").slideUp("slow");
+            }, 3000);
+          },
         });
 
-    }
+        return false; // required to block normal submit since you used ajax
+      },
+    });
+  }
 
-
-
-
-
-    /*------------------------------------------
+  /*------------------------------------------
 
         = STYLE SWITCHER
 
-    -------------------------------------------*/  
+    -------------------------------------------*/
 
-    // HTML FOR COLOR SWITCHER
+  // HTML FOR COLOR SWITCHER
 
-    var switcherHtml = '<div class="style-switcher-box"> <div class="switcher-inner"><h5>Style Switcher</h5> <div class="main-list"> <div class="list"> <span class="list-title">Skin color</span> <div class="sublist"> <ul class="color-chager"> <li class="color-default"><img src="assets/images/switcher-color/img-1.jpg" alt></li> <li class="color-style1"><img src="assets/images/switcher-color/img-2.jpg" alt></li> <li class="color-style2"><img src="assets/images/switcher-color/img-3.jpg" alt></li> <li class="color-style3"><img src="assets/images/switcher-color/img-4.jpg" alt></li> </ul> </div> </div> <div class="list layout"> <span class="list-title">Layout</span> <div class="sublist"> <ul class="layout-sw"> <li>Full width</li> <li class="box">Box</li> </ul> </div> </div> </div> <p><span>Note: </span> This template is build with SASS. The skin color is only demo. You can change the color scheme as your like. </p> </div> <button class="toggle-btn"><i class="fa fa-cog"></i></button> </div>';
+  var switcherHtml =
+    '<div class="style-switcher-box"> <div class="switcher-inner"><h5>Style Switcher</h5> <div class="main-list"> <div class="list"> <span class="list-title">Skin color</span> <div class="sublist"> <ul class="color-chager"> <li class="color-default"><img src="assets/images/switcher-color/img-1.jpg" alt></li> <li class="color-style1"><img src="assets/images/switcher-color/img-2.jpg" alt></li> <li class="color-style2"><img src="assets/images/switcher-color/img-3.jpg" alt></li> <li class="color-style3"><img src="assets/images/switcher-color/img-4.jpg" alt></li> </ul> </div> </div> <div class="list layout"> <span class="list-title">Layout</span> <div class="sublist"> <ul class="layout-sw"> <li>Full width</li> <li class="box">Box</li> </ul> </div> </div> </div> <p><span>Note: </span> This template is build with SASS. The skin color is only demo. You can change the color scheme as your like. </p> </div> <button class="toggle-btn"><i class="fa fa-cog"></i></button> </div>';
 
-    var blankStyleInject = '<link href="assets/css/blank-color.css" rel="stylesheet" title="switchstyle">';
+  var blankStyleInject =
+    '<link href="assets/css/blank-color.css" rel="stylesheet" title="switchstyle">';
 
-    var htmlHead = $("head");
+  var htmlHead = $("head");
 
+//   $("body").append(switcherHtml);
 
+  // htmlHead.append(blankStyleInject);
 
-        $("body").append(switcherHtml);
+  function styleSwitcher() {
+    if ($(".style-switcher-box").length) {
+      var switcherHolder = $(".style-switcher-box"),
+        btn = switcherHolder.find(".toggle-btn"),
+        colorChangerBtn = $(".style-switcher-box .color-chager li"),
+        layoutChangerBtn = $(".style-switcher-box .layout-sw li"),
+        links = document.getElementsByTagName("link");
 
-        htmlHead.append(blankStyleInject);
+      var body = $("body");
 
+      for (var i = 0; i <= links.length; i++) {
+        var title = links[i].getAttribute("title");
 
+        if (title == "switchstyle") {
+          var targetLink = links[i];
 
+          var href = links[i].getAttribute("href");
 
-
-    function styleSwitcher() {
-
-        if ($(".style-switcher-box").length) {
-
-            var switcherHolder = $(".style-switcher-box"),
-
-                btn = switcherHolder.find(".toggle-btn"),
-
-                colorChangerBtn = $(".style-switcher-box .color-chager li"),
-
-                layoutChangerBtn = $(".style-switcher-box .layout-sw li"),
-
-                links = document.getElementsByTagName("link");
-
-            var body = $("body");
-
-
-
-            for (var i = 0; i <= links.length; i++){
-
-                var title = links[i].getAttribute("title");
-
-                if ( title == "switchstyle") {
-
-                    var targetLink = links[i];
-
-                    var href = links[i].getAttribute("href");
-
-                    break;
-
-                }
-
-            }
-
-
-
-
-
-            btn.on("click", function() {
-
-                switcherHolder.toggleClass("toggle-switcherbox");
-
-
-
-            })
-
-
-
-            colorChangerBtn.on("click", function() {
-
-                var $this = $(this);
-
-                var styleFileName = $this.attr("class");
-
-                targetLink.href = "assets/css/" + styleFileName + ".css";
-
-            });
-
-
-
-            layoutChangerBtn.on("click", function(e) {
-
-                var $this = $(this);
-
-                if ( $this.hasClass("box") ) {
-
-                    body.addClass("box-layout");
-
-                } else {
-
-                    body.removeClass("box-layout");
-
-                }
-
-            })
-
+          break;
         }
+      }
 
+      btn.on("click", function () {
+        switcherHolder.toggleClass("toggle-switcherbox");
+      });
+
+      colorChangerBtn.on("click", function () {
+        var $this = $(this);
+
+        var styleFileName = $this.attr("class");
+
+        targetLink.href = "assets/css/" + styleFileName + ".css";
+      });
+
+      layoutChangerBtn.on("click", function (e) {
+        var $this = $(this);
+
+        if ($this.hasClass("box")) {
+          body.addClass("box-layout");
+        } else {
+          body.removeClass("box-layout");
+        }
+      });
     }
+  }
 
+  styleSwitcher();
 
-
-    styleSwitcher();    
-
-
-
-
-
-
-
-
-
-    /*==========================================================================
+  /*==========================================================================
 
         WHEN DOCUMENT LOADING 
 
     ==========================================================================*/
 
-        $(window).on('load', function() {
+  $(window).on("load", function () {
+    preloader();
 
+    sliderBgSetting();
 
+    toggleMobileNavigation();
 
-            preloader();
+    smallNavFunctionality();
 
+    //service grid bg image setting
 
+    makeBg($(".mk-bg-img"));
 
-            sliderBgSetting();
+    if ($("#map").length) {
+      map();
+    }
+  });
 
-			
-
-            toggleMobileNavigation();
-
-
-
-            smallNavFunctionality();
-
-            
-
-            //service grid bg image setting
-
-            makeBg($(".mk-bg-img"));
-
-
-
-            if($("#map").length) {
-
-                map();
-
-            }
-
-			
-
-        });
-
-
-
-
-
-
-
-    /*==========================================================================
+  /*==========================================================================
 
         WHEN WINDOW SCROLL
 
     ==========================================================================*/
 
-    $(window).on("scroll", function() {
+  $(window).on("scroll", function () {
+    if ($(".site-header").length) {
+      stickIt($(".sticky-header"), "sticky-on");
+    }
 
+    bgParallax();
 
+    toggleBackToTopBtn();
+  });
 
-		if ($(".site-header").length) {
-
-            stickIt($(".sticky-header"), "sticky-on"); 
-
-        }
-
-        
-
-        bgParallax();
-
-
-
-        toggleBackToTopBtn(); 
-
-        
-
-    });
-
-
-
-    
-
-    /*==========================================================================
+  /*==========================================================================
 
         WHEN WINDOW RESIZE
 
     ==========================================================================*/
 
-    $(window).on("resize", function() {
+  $(window).on("resize", function () {
+    toggleClassForSmallNav();
 
-        
+    if ($(".recent-projects-grids").length) {
+      setMcustomScrollBar($(".recent-projects-grids"));
+    }
 
-        toggleClassForSmallNav();
+    clearTimeout($.data(this, "resizeTimer"));
 
-
-
-        if($(".recent-projects-grids").length) {
-
-            setMcustomScrollBar($(".recent-projects-grids"));
-
-        }
-
-
-
-
-
-        clearTimeout($.data(this, 'resizeTimer'));
-
-
-
-        $.data(this, 'resizeTimer', setTimeout(function() {
-
-            smallNavFunctionality();
-
-        }, 200));
-
-
-
-    });
-
-
-
-
-
-
-
+    $.data(
+      this,
+      "resizeTimer",
+      setTimeout(function () {
+        smallNavFunctionality();
+      }, 200)
+    );
+  });
 })(window.jQuery);

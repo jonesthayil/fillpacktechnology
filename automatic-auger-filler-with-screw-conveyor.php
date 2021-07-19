@@ -2,35 +2,7 @@
 <html lang="en">
 
 <head>
-   <script>
-      function includeHTML() {
-         var z, i, elmnt, file, xhttp;
-         /*loop through a collection of all HTML elements:*/
-         z = document.getElementsByTagName("*");
-         for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-               /*make an HTTP request using the attribute value as the file name:*/
-               xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function () {
-                  if (this.readyState == 4) {
-                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                     /*remove the attribute, and call this function once more:*/
-                     elmnt.removeAttribute("w3-include-html");
-                     includeHTML();
-                  }
-               }
-               xhttp.open("GET", file, true);
-               xhttp.send();
-               /*exit the function:*/
-               return;
-            }
-         }
-      };
-   </script>
+   
    <!-- Meta Tags -->
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +65,7 @@
          </div>
       </div>
       <header id=header class="site-header header-style-5">
-         <div w3-include-html="menu.html"></div>
+         <?php include ("menu.php"); ?>
       </header>
       <section class="page-title">
          <div class="container">
@@ -101,7 +73,7 @@
                <div class="col col-xs-12">
                   <h2>Automatic Auger Filler Machine</h2>
                   <ol class="breadcrumb">
-                     <li><a href="index.html"></a></li>
+                     <li><a href="index.php"></a></li>
                   </ol>
                </div>
             </div>
@@ -136,7 +108,7 @@
                         </ul>
                         <h4></h4>
                         <div class="extrabtn">
-                           <a href="contact.html" class="theme-btn extrabtn">Contact us</a>
+                           <a href="contact.php" class="theme-btn extrabtn">Contact us</a>
                         </div>
                      </div>
                   </div>
@@ -148,19 +120,19 @@
                      <div class="services-link-widget widget">
                         <ul>
                            <li class="current"><a href="#">Automatic Auger Filler Machine</a></li>
-                           <li><a href="paneer-cutting-machine.html">Paneer cutting machine</a></li>
-                           <li><a href="linear-conduction-sealing-machine.html">linear conduction sealing machine</a>
+                           <li><a href="paneer-cutting-machine.php">Paneer cutting machine</a></li>
+                           <li><a href="linear-conduction-sealing-machine.php">linear conduction sealing machine</a>
                            </li>
-                           <li><a href="web-sealing-machine.html">Web Sealing Machine</a></li>
-                           <li><a href="automatic-curd-cup-filling-and-sealing-machine.html">automatic curd cup filling
+                           <li><a href="web-sealing-machine.php">Web Sealing Machine</a></li>
+                           <li><a href="automatic-curd-cup-filling-and-sealing-machine.php">automatic curd cup filling
                                  and sealing</a></li>
-                           <li><a href="bottle-washing-machine.html">bottle washing machine</a></li>
-                           <li><a href="vacuum-packing-machine.html">vacuum packing machine</a></li>
+                           <li><a href="bottle-washing-machine.php">bottle washing machine</a></li>
+                           <li><a href="vacuum-packing-machine.php">vacuum packing machine</a></li>
                            <li><a href="horizontal-flow-pack-packing-machine">horizontal-flow-pack-packing-machine</a>
                            </li>
                            <li><a href="paneer-pressing-machine">paneer pressing machine</a></li>
                            <li><a href="tube-filling-machine">tube filling machine</a></li>
-                           <li><a href="bottle-filling-machine.html">Bottle Filling Machine</a></li>
+                           <li><a href="bottle-filling-machine.php">Bottle Filling Machine</a></li>
                         </ul>
                      </div>
                      <div class="widget contact-widget">
@@ -220,15 +192,15 @@
                      <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                           <li><a href=dairy.html>Dairy </a>
+                           <li><a href=dairy.php>Dairy </a>
                            </li>
-                           <li><a href=food.html>Food </a>
+                           <li><a href=food.php>Food </a>
                            </li>
-                           <li><a href=beverages.html>Beverage </a>
+                           <li><a href=beverages.php>Beverage </a>
                            </li>
-                           <li><a href=pharma.html>Pharma </a>
+                           <li><a href=pharma.php>Pharma </a>
                            </li>
-                           <li><a href=cosmetics.html>Cosmetics </a>
+                           <li><a href=cosmetics.php>Cosmetics </a>
                         </ul>
                      </div>
                   </div>
@@ -254,7 +226,7 @@
    <script src="assets/js/jquery.mCustomScrollbar.js"></script>
    <!-- Custom script for this template -->
    <script src="assets/js/script.js"></script>
-   <div w3-include-html="social.html"></div>
+   <?php include ("social.php"); ?>
 </body>
 
 </html>
