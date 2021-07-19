@@ -65,7 +65,7 @@ echo '<div class="topbar topbar-style-2">
       <div class=row>
          <div class="col col-sm-3">
             <div class=site-logo>
-               <a href=index.php>
+               <a href="/">
                   <img src=assets/images/fillpacklogo.png alt>
                </a>
             </div>
@@ -107,7 +107,7 @@ echo '<div class="topbar topbar-style-2">
          <button class=close-navbar><i class="fa fa-close"></i>
          </button>
          <ul class="nav navbar-nav">
-            <li class=menu-item-has-children> <a href=index.php>Home</a>
+            <li class=menu-item-has-children> <a href="/">Home</a>
             </li>
             <li><a href=about.php>About</a>
             </li>

@@ -3,6 +3,7 @@
 
 <head>
    <meta charset=utf-8>
+   <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
    <title>Fillpack Technology- Packaging Machines | Filling Machines</title>
@@ -12,10 +13,17 @@
       content="bottle washing machine manufacturers in india, automatic bottle washing machine manufacturers in india, automatic bottle washing machine, bottle air washing machine, automatic high speed bottle washing machine, bottle washing machine india linear bottle washing machine, automatic linear bottle washing machine, bottle washing machine pharma, curd pouch packing machine, automatic cup filling machine, cup filling and sealing machine in india, automatic cup filling machine induction sealing machine manufacturers, Dairy equipments, filling machine, dairy equipments manufacturer in India">
    <meta name=robots content="index, follow">
    <meta name=title content="Fillpack - Paneer Machine | Packaging & Filling  Machines">
+   <meta name=description content="">
+   <meta name=keywords
+      content="liquid filling machine manufacturers, paneer cutting machine manufacturers, Web Sealer Machine">
+   <meta name=robots content="index, follow">
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
    <meta name=language content=English>
    <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=png/ico>
+   <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic"
+      rel="stylesheet">
+   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type="png/ico">
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
    <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
@@ -34,14 +42,9 @@
    <link href=assets/css/style.css rel=stylesheet>
    <link href=assets/css/mystyle.css rel=stylesheet>
    <link href=assets/css/boot.css rel=stylesheet>
-   <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic"
-      rel="stylesheet">
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123197418-1"></script>
+   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123197418-1"></script>
    <script>
       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");
-   </script>
-   <script>
       function openPage(pageName, elmnt, color) {
          // Hide all elements with class="tabcontent" by default */
          var i, tabcontent, tablinks;
@@ -65,7 +68,7 @@
 
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
-   </script>
+   </script> -->
    <div class="modal fade text-center py-5 subscribeModal-lg" id=subscribeModal tabindex=-1 role=dialog
       aria-labelledby=exampleModalLabel aria-hidden=true>
       <div class="modal-dialog modal-lg" role=document>
@@ -104,22 +107,6 @@
       <header id=header class="site-header header-style-5">
          <?php include ("menu.php"); ?>
       </header>
-      <!-- <section class=disclaimer>
-            <div class=container>
-            	<div class=row>
-            		<div class=col-sm-2>
-            			<h5>Exhibition</h5>
-            		</div>
-            		<div class=col-sm-10>
-            			<marquee id=scroll_news>
-            				<div onmouseout="document.getElementById('scroll_news').start()" onmouseover="document.getElementById('scroll_news').stop()">
-            					<h5></h5>
-            				</div>
-            			</marquee>
-            		</div>
-            	</div>
-            </div>
-            </section> -->
       <section class="hero hero-slider-wrapper">
          <div class="hero-slider hero-slider-style-1">
             <div class=slide>
@@ -336,31 +323,6 @@
             </div>
          </div>
       </section>
-      <!-- <section class="testimonials section-padding parallax" data-bg-image=assets/images/testimonials/bg.jpg>
-            <div class=container>
-            	<div class=row>
-            		<div class="col col-xs-12">
-            			<div class="testimonials-slider slider-arrow-s1">
-            				<div class=slide-item>
-            					<div class=inner>
-            						<div class=client-quote></div>
-            					</div>
-            				</div>
-            				<div class=slide-item>
-            					<div class=inner>
-            						<div class=client-quote></div>
-            						<div class=client-details>
-            							<div class=client-pic></div>
-            							<div class=client-info></div>
-            						</div>
-            					</div>
-            				</div>
-            			</div>
-            		</div>
-            	</div>
-            </div>
-            </section> -->
-
       <section class=section-padding>
          <div class=container>
             <div class=row>
@@ -483,42 +445,6 @@
                         <div class=inner-info></div>
                      </div>
                   </div>
-                  <!-- <div class=grid>
-                        <div class=project-img>
-                        	<img src=assets/images/event/5.jpg alt>
-                        </div>
-                        <div class=project-info>
-                        	<div class=inner-info></div>
-                        </div>
-                        </div>
-                        <div class=grid>
-                        <div class=project-img>
-                        	<img src=assets/images/event/7.jpg alt>
-                        </div>
-                        <div class=project-info>
-                        	<div class=inner-info></div>
-                        </div>
-                        </div>
-                        <div class=grid>
-                        <div class=project-img>
-                        	<img src=assets/images/event/8.jpg alt>
-                        </div>
-                        <div class=project-info>
-                        	<div class=inner-info></div>
-                        </div>
-                        </div>
-                        <div class=grid>
-                        <div class=project-img>
-                        	<img src=assets/images/event/9.jpg alt>
-                        </div>
-                        <div class=project-info>
-                        	<div class=inner-info></div>
-                        </div>
-                        </div>
-                        <div class=grid>
-                        <div class=project-img>
-                        	<img src=assets/images/event/6.jpg alt>
-                        </div> -->
                   <div class=project-info>
                      <div class=inner-info></div>
                   </div>
@@ -644,59 +570,7 @@
          <img src=assets/images/backhoe-loader.png alt>
       </div>
    </section>
-   <section class="section-padding partners">
-      <h2 class=hidden>Partners</h2>
-      <p class=clientsextra>Some Of Our Valued Clients :</p>
-      <div class=container>
-         <div class=row>
-            <div class="col col-xs-12">
-               <div class=partners-slider>
-                  <div class=grid>
-                     <img src=assets/images/partners/govind.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/amol.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/warna.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/nandini.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/lotus.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo01.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo11.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo10.png alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo09.png alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo08.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo07.jpg alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo06.png alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo05.png alt>
-                  </div>
-                  <div class=grid>
-                     <img src=assets/images/partners/Logo04.jpg alt>
-                  </div>
-               </div>
-            </div>
-         </div>
-   </section>
+   <?php include ("clients.php"); ?>
    <section class="contact-section section-padding parallax" data-bg-image=assets/images/contact-section-bg.jpg>
       <div class=container>
          <div class=row>
@@ -762,75 +636,14 @@
             </div>
          </div>
       </div>
-      <!-- <div class="contact-women wow fadeInLeft">
-         <img src=assets/images/contact-women.png alt>
-      </div> -->
    </section>
-   <footer class=site-footer>
-      <div class=upper-footer>
-         <div class=container>
-            <div class=row>
-               <div class="col col-md-4 col-sm-6">
-                  <div class="widget about-widget">
-                     <div class=footer-logo>
-                        <img src="assets/images/footerlogo.png">
-                     </div>
-                     <ul class=contact-info>The company has a successful leadership track record of two generations of
-                        being in the same business of machine manufacturing, which once reckoned from machining job work
-                        30 years back. Since then we have never looked back.</ul>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-sm-6">
-                  <div class="widget about-widget">
-                     <h3>GET IN TOUCH</h3>
-                     <ul class=contact-info>
-                        <li><i class="fa fa-home"></i> Head Office
-                           <br>Ekveera Laghu-Udyog Sankul, Unit No.14, Road No.25, Wagale Industrial Estate, Thane West
-                           - 400 604 Maharashtra, India.
-                        </li>
-                        <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
-                        <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
-                        <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
-                        <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-md-4 col-sm-6">
-                  <div class="widget service-links-widget">
-                     <h3>Services</h3>
-                     <ul>
-                        <li><a href=dairy.php>Dairy </a>
-                        </li>
-                        <li><a href=food.php>Food </a>
-                        </li>
-                        <li><a href=beverages.php>Beverage </a>
-                        </li>
-                        <li><a href=pharma.php>Pharma </a>
-                        </li>
-                        <li><a href=cosmetics.php>Cosmetics </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class=copyright-info>
-         <div class=container>
-            <p>2018 &copy; All Rights Reserved by <a href=#>Fillpack Technology</a>
-            </p>
-         </div>
-      </div>
-   </footer>
+   <?php include ("footer.php"); ?>
    </div>
    <script src=assets/js/jquery.min.js></script>
    <script src=assets/js/bootstrap.min.js></script>
    <script src=assets/js/jquery-plugin-collection.js></script>
    <script src=assets/js/jquery.mCustomScrollbar.js></script>
    <script src=assets/js/script.js></script>
-   <!-- <script>
-         $(window).on("load",function(){setTimeout(function(){$("#subscribeModal").modal("show")},5000);setTimeout(function(){$(".subscribeModal-lg").modal("show")},10000)});$("#Reloadpage").click(function(){location.reload()});
-         </script> -->
    <script type=text/javascript>
          var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
          (function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=true;a.src="https://embed.tawk.to/5b94e747afc2c34e96e85a82/default";a.charset="UTF-8";a.setAttribute("crossorigin","*");b.parentNode.insertBefore(a,b)})();

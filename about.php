@@ -6,6 +6,12 @@
    <meta http-equiv=X-UA-Compatible content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name=ganesh content=fillpack>
+   <title> Fillpack - About Us </title>
+   <meta name=description
+      content="FILLPACK TECHNOLOGY has been sure for over 20 years for its inhouse producing of Quality packaging machine for industries like farm, Pharma,Beverages,Food.">
+   <meta name=keywords
+      content="bottle washing machine manufacturers in india, automatic bottle washing machine manufacturers in india, automatic bottle washing machine, bottle air washing machine, automatic high speed bottle washing machine, bottle washing machine india linear bottle washing machine, automatic linear bottle washing machine, bottle washing machine pharma, curd pouch packing machine, automatic cup filling machine, cup filling and sealing machine in india, automatic cup filling machine induction sealing machine manufacturers, Dairy equipments, filling machine, dairy equipments manufacturer in India">
+   <meta name=robots content="index, follow">
    <meta name=title content="Fillpack - About Us">
    <meta name=description content="">
    <meta name=keywords
@@ -14,8 +20,8 @@
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
    <meta name=language content=English>
    <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-   <title> Fillpack - About Us </title>
-   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
+   
+   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type="png/ico">
    <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
    <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
    <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
@@ -175,85 +181,8 @@
             </div>
          </div>
       </section>
-      <section class="section-padding partners">
-         <h2 class=hidden>Partners</h2>
-         <p class=clientsextra>Our Clients :</p>
-         <div class=container>
-            <div class=row>
-               <div class="col col-xs-12">
-                  <div class=partners-slider>
-                     <div class=grid>
-                        <img src=assets/images/partners/govind.jpg alt>
-                     </div>
-                     <div class=grid>
-                        <img src=assets/images/partners/amol.jpg alt>
-                     </div>
-                     <div class=grid>
-                        <img src=assets/images/partners/warna.jpg alt>
-                     </div>
-                     <div class=grid>
-                        <img src=assets/images/partners/nandini.jpg alt>
-                     </div>
-                     <div class=grid>
-                        <img src=assets/images/partners/lotus.jpg alt>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <footer class=site-footer>
-         <div class=upper-footer>
-            <div class=container>
-               <div class=row>
-                  <div class="col col-md-4 col-sm-6">
-                     <div class="widget about-widget">
-                        <div class=footer-logo><img src=assets/images/footerlogo.png alt></div>
-                        <ul class=contact-info>
-                           <p>The company has a successful leadership track record of two generations of being in the
-                              same business of machine manufacturing, which once reckoned from machining job work 30
-                              years back. Since then we have never looked back.</p>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col col-md-4 col-sm-6">
-                     <div class="widget about-widget">
-                        <h3>GET IN TOUCH</h3>
-                        <ul class=contact-info>
-                           <li><i class="fa fa-home"></i> Fillpack Technology<br> Ekveera Laghu-Udyog Sankul, Unit
-                              No.14, Road No.25, Wagale Industrial Estate, Thane West - 400 604 Maharashtra, India.</li>
-                           <li><i class="fa fa-phone"></i>(+91 ) 897 657 7735</li>
-                           <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
-                           <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
-                           <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col col-md-4 col-sm-6">
-                     <div class="widget service-links-widget">
-                        <h3>Services</h3>
-                        <ul>
-                           <li><a href=dairy.php>Dairy </a>
-                           </li>
-                           <li><a href=food.php>Food </a>
-                           </li>
-                           <li><a href=beverages.php>Beverage </a>
-                           </li>
-                           <li><a href=pharma.php>Pharma </a>
-                           </li>
-                           <li><a href=cosmetics.php>Cosmetics </a>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class=copyright-info>
-            <div class=container>
-               <p>2018 &copy; All Rights Reserved by <a href>Fillpack Technology</a></p>
-            </div>
-         </div>
-      </footer>
+      <?php include ("clients.php"); ?>
+      <?php include ("footer.php"); ?>
    </div>
    <script src=assets/js/jquery.min.js></script>
    <script src=assets/js/bootstrap.min.js></script>
