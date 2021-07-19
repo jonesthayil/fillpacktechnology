@@ -33,6 +33,7 @@ echo '<div class="topbar topbar-style-2">
                  <li><a href="https://www.instagram.com/fillpacktechnology/"><i class="fa fa-instagram"></i></a></li>
                  <li><a href=" https://www.youtube.com/channel/UC77YU3ClpdClhNaNsXq2r_A/featured?view_as=subscriber"><i
                        class="fa fa-youtube"></i></a></li>
+               <li><a href="https://api.whatsapp.com/send?phone=9987784735"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                </ul>
              </div>
 

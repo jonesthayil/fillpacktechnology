@@ -27,16 +27,16 @@
 				<li class="dairylink" data-url="/dairy/vacuum-packing-machine.php">
 					<a href="/dairy/vacuum-packing-machine.php">vacuum packing machine</a>
 				</li>
-				<li class="dairylink" data-url="/dairy/horizontal-flow-pack-packing-machine">
-					<a href="/dairy/horizontal-flow-pack-packing-machine">
+				<li class="dairylink" data-url="/dairy/horizontal-flow-pack-packing-machine.php">
+					<a href="/dairy/horizontal-flow-pack-packing-machine.php">
 						horizontal-flow-pack-packing-machine
 					</a>
 				</li>
-				<li class="dairylink" data-url="/dairy/paneer-pressing-machine">
-					<a href="/dairy/paneer-pressing-machine">paneer pressing machine</a>
+				<li class="dairylink" data-url="/dairy/paneer-pressing-machine.php">
+					<a href="/dairy/paneer-pressing-machine.php">paneer pressing machine</a>
 				</li>
-				<li class="dairylink" data-url="/dairy/tube-filling-machine">
-					<a href="/dairy/tube-filling-machine">tube filling machine</a>
+				<li class="dairylink" data-url="/dairy/tube-filling-machine.php">
+					<a href="/dairy/tube-filling-machine.php">tube filling machine</a>
 				</li>
 				<li class="dairylink" data-url="/dairy/bottle-filling-machine.php">
 					<a href="/dairy/bottle-filling-machine.php">Bottle Filling Machine</a>
