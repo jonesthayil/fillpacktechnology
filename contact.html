@@ -1,307 +1,317 @@
-
-
 <!DOCTYPE html>
 <html lang=en>
-   <head>
-      <script>
-         function includeHTML() {
-           var z, i, elmnt, file, xhttp;
-           /*loop through a collection of all HTML elements:*/
-           z = document.getElementsByTagName("*");
-           for (i = 0; i < z.length; i++) {
-             elmnt = z[i];
-             /*search for elements with a certain atrribute:*/
-             file = elmnt.getAttribute("w3-include-html");
-             if (file) {
+
+<head>
+   <script>
+      function includeHTML() {
+         var z, i, elmnt, file, xhttp;
+         /*loop through a collection of all HTML elements:*/
+         z = document.getElementsByTagName("*");
+         for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
                /*make an HTTP request using the attribute value as the file name:*/
                xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function() {
-                 if (this.readyState == 4) {
-                   if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                   if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                   /*remove the attribute, and call this function once more:*/
-                   elmnt.removeAttribute("w3-include-html");
-                   includeHTML();
-                 }
-               }      
+               xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4) {
+                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                     /*remove the attribute, and call this function once more:*/
+                     elmnt.removeAttribute("w3-include-html");
+                     includeHTML();
+                  }
+               }
                xhttp.open("GET", file, true);
                xhttp.send();
                /*exit the function:*/
                return;
-             }
-           }
-         };
-      </script>
-      <meta charset=utf-8>
-      <meta http-equiv=X-UA-Compatible content="IE=edge">
-      <meta name=viewport content="width=device-width, initial-scale=1">
-      <meta name=ganesh content=fillpack>
-      <meta name=title content="Fillpack - Contact">
-      <meta name=description content="">
-      <meta name=keywords content="liquid filling machine manufacturers, paneer cutting machine manufacturers, Web Sealer Machine">
-      <meta name=robots content="index, follow">
-      <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-      <meta name=language content=English>
-      <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
-      <title>Fillpack - Contact</title>
-      <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
-      <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
-      <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
-      <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
-      <link href=assets/images/favicon/apple-touch-icon-144x144.png rel=apple-touch-icon sizes=144x144>
-      <link href=assets/css/font-awesome.min.css rel=stylesheet>
-      <link href=assets/css/flaticon.css rel=stylesheet>
-      <link href=assets/css/bootstrap.min.css rel=stylesheet>
-      <link href=assets/css/animate.css rel=stylesheet>
-      <link href=assets/css/owl.carousel.css rel=stylesheet>
-      <link href=assets/css/owl.theme.css rel=stylesheet>
-      <link href=assets/css/slick.css rel=stylesheet>
-      <link href=assets/css/slick-theme.css rel=stylesheet>
-      <link href=assets/css/owl.transitions.css rel=stylesheet>
-      <link href=assets/css/jquery.fancybox.css rel=stylesheet>
-      <link href=assets/css/jquery.mCustomScrollbar.min.css rel=stylesheet>
-      <link href=assets/css/style.css rel=stylesheet>
-      <link href=assets/css/mystyle.css rel=stylesheet>
-      <script>
-         window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","UA-123197418-1");
-      </script>
-      <script>
-         function includeHTML() {
-         	var z, i, elmnt, file, xhttp;
-         	/*loop through a collection of all HTML elements:*/
-         	z = document.getElementsByTagName("*");
-         	for (i = 0; i < z.length; i++) {
-         		elmnt = z[i];
-         		/*search for elements with a certain atrribute:*/
-         		file = elmnt.getAttribute("w3-include-html");
-         		if (file) {
-         			/*make an HTTP request using the attribute value as the file name:*/
-         			xhttp = new XMLHttpRequest();
-         			xhttp.onreadystatechange = function() {
-         				if (this.readyState == 4) {
-         					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-         					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-         					/*remove the attribute, and call this function once more:*/
-         					elmnt.removeAttribute("w3-include-html");
-         					includeHTML();
-         				}
-         			}      
-         			xhttp.open("GET", file, true);
-         			xhttp.send();
-         			/*exit the function:*/
-         			return;
-         		}
-         	}
-         };
-      </script>
-   </head>
-   <body>
-      <div class=page-wrapper>
-         <div class=preloader>
-            <div class=preloader-inner>
-               <img src=assets/images/preloader.gif alt>
+            }
+         }
+      };
+   </script>
+   <meta charset=utf-8>
+   <meta http-equiv=X-UA-Compatible content="IE=edge">
+   <meta name=viewport content="width=device-width, initial-scale=1">
+   <meta name=ganesh content=fillpack>
+   <meta name=title content="Fillpack - Contact">
+   <meta name=description content="">
+   <meta name=keywords
+      content="liquid filling machine manufacturers, paneer cutting machine manufacturers, Web Sealer Machine">
+   <meta name=robots content="index, follow">
+   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+   <meta name=language content=English>
+   <meta name=google-site-verification content=o5l6V_E6l2T_wZjI-0ssFaiMRxzFDqYKmqqKgeJ9jtQ />
+   <title>Fillpack - Contact</title>
+   <link href=assets/images/favicon/favicon.ico rel="shortcut icon" type=image/png>
+   <link href=assets/images/favicon/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57>
+   <link href=assets/images/favicon/apple-touch-icon-72x72.png rel=apple-touch-icon sizes=72x72>
+   <link href=assets/images/favicon/apple-touch-icon-114x114.png rel=apple-touch-icon sizes=114x114>
+   <link href=assets/images/favicon/apple-touch-icon-144x144.png rel=apple-touch-icon sizes=144x144>
+   <link href=assets/css/font-awesome.min.css rel=stylesheet>
+   <link href=assets/css/flaticon.css rel=stylesheet>
+   <link href=assets/css/bootstrap.min.css rel=stylesheet>
+   <link href=assets/css/animate.css rel=stylesheet>
+   <link href=assets/css/owl.carousel.css rel=stylesheet>
+   <link href=assets/css/owl.theme.css rel=stylesheet>
+   <link href=assets/css/slick.css rel=stylesheet>
+   <link href=assets/css/slick-theme.css rel=stylesheet>
+   <link href=assets/css/owl.transitions.css rel=stylesheet>
+   <link href=assets/css/jquery.fancybox.css rel=stylesheet>
+   <link href=assets/css/jquery.mCustomScrollbar.min.css rel=stylesheet>
+   <link href=assets/css/style.css rel=stylesheet>
+   <link href=assets/css/mystyle.css rel=stylesheet>
+   <script>
+      window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "UA-123197418-1");
+   </script>
+   <script>
+      function includeHTML() {
+         var z, i, elmnt, file, xhttp;
+         /*loop through a collection of all HTML elements:*/
+         z = document.getElementsByTagName("*");
+         for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+               /*make an HTTP request using the attribute value as the file name:*/
+               xhttp = new XMLHttpRequest();
+               xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4) {
+                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                     /*remove the attribute, and call this function once more:*/
+                     elmnt.removeAttribute("w3-include-html");
+                     includeHTML();
+                  }
+               }
+               xhttp.open("GET", file, true);
+               xhttp.send();
+               /*exit the function:*/
+               return;
+            }
+         }
+      };
+   </script>
+</head>
+
+<body>
+   <div class=page-wrapper>
+      <div class=preloader>
+         <div class=preloader-inner>
+            <img src=assets/images/preloader.gif alt>
+         </div>
+      </div>
+      <header id=header class="site-header header-style-5">
+         <div w3-include-html="menu.html"></div>
+      </header>
+      <section class=page-Contact>
+         <div class=container>
+            <div class=row>
+               <div class="col col-xs-12">
+                  <h2>Contact</h2>
+                  <ol class=breadcrumb>
+                     <li>
+                        <a href=index.html></a>
+                     </li>
+                     <li></li>
+                  </ol>
+               </div>
             </div>
          </div>
-         <header id=header class="site-header header-style-5">
-            <div w3-include-html="menu.html"></div>
-         </header>
-         <section class=page-Contact>
+      </section>
+      <section class="contact-pg-section section-padding">
+         <div class=container>
+            <div class="row">
+               <div class="col col-md-5">
+                  <div class="contact-info">
+                     <h3>Head Office</h3>
+                     <ul>
+                        <li>
+                           <div class="icon"><i class="fa fa-phone"></i>
+                           </div>
+                           <p><span>Phone</span> (+91) 89765 77735</p>
+                           <p><span></span>(+91) 99877 84735</p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-envelope"></i>
+                           </div>
+                           <p><span>Email</span>
+                        <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
+                        <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
+                        </p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-clock-o"></i>
+                           </div>
+                           <p><span>Working Hours:</span> 9:00 Am To 6:00 Pm (Friday Off)</p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-location-arrow"></i>
+                           </div>
+                           <p><span>Office</span> Ekveera Laghu-Udyog Sankul,
+                              <br>Unit No.14, Road No.25,
+                              <br>Wagale Industrial Estate,
+                              <br>Thane West - 400 604 Maharashtra, India.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col col-md-5">
+                  <div class="contact-info">
+                     <h3>Sales Office</h3>
+                     <ul>
+                        <li>
+                           <div class="icon"><i class="fa fa-phone"></i>
+                           </div>
+                           <p><span>Phone</span> (+91) 89765 77735</p>
+                           <p><span></span>(+91) 99877 84735</p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-envelope"></i>
+                           </div>
+                           <p><span>Email</span>
+                        <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
+                        <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
+                        </p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-clock-o"></i>
+                           </div>
+                           <p><span>Working Hours:</span> 9:00 Am To 5:30 Pm (Sunday Off)</p>
+                        </li>
+                        <li>
+                           <div class="icon"><i class="fa fa-location-arrow"></i>
+                           </div>
+                           <p><span>Office</span> Plot no B-35/3, Additional Ambernath Industrial Area,
+                              <br>Jambhivali Ambernath East - 421506
+                              <br>District - Thane Maharashtra, India
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <br><br>
+               </div>
+               <div class="col-md-5 extrapadding">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.968058249743!2d72.94720988557405!3d19.200782065978153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9aa9b4bc6124e650!2sFill+Pack+Machine!5e0!3m2!1sen!2sin!4v1499533130119"
+                     style="border:0" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
+               </div>
+               <div class="col-md-5 extrapadding">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.625540634027!2d73.189249415429!3d19.179927927703865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be793c9dd166dbb%3A0xe353a210174a726e!2sFillpack+Technology!5e0!3m2!1sen!2sin!4v1533713611680"
+                     style="border:0" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
+               </div>
+               <div class="row">
+                  <div class="col col-md-9">
+                     <h3>Send us an Email</h3>
+                     <form class="contact-form form contact-validation-active row" id="contact-form-s2"
+                        novalidate="novalidate">
+                        <div class="col col-sm-6">
+                           <label for="f-name">First Name</label>
+                           <input type="text" class="form-control" id="f-name" name="f_name">
+                        </div>
+                        <div class="col col-sm-6">
+                           <label for="l-name">Last Name</label>
+                           <input type="text" class="form-control" id="l-name" name="l_name">
+                        </div>
+                        <div class="col col-sm-6">
+                           <label for="email">Email</label>
+                           <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="col col-sm-6">
+                           <label for="phone">Phone No</label>
+                           <input type="text" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="col col-sm-12">
+                           <label for="message">Message</label>
+                           <textarea class="form-control" id="message" name="note"></textarea>
+                        </div>
+                        <div class="col col-sm-2 submit-btn">
+                           <button class="theme-btn">Submit</button>
+                           <div id="loader">
+                              <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                           </div>
+                        </div>
+                        <div class="error-handling-messages">
+                           <div id="success">Thank you</div>
+                           <div id="error">Error occurred while sending email. Please try again later.</div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class=site-footer>
+         <div class=upper-footer>
             <div class=container>
                <div class=row>
-                  <div class="col col-xs-12">
-                     <h2>Contact</h2>
-                     <ol class=breadcrumb>
-                        <li>
-                           <a href=index.html></a>
-                        </li>
-                        <li></li>
-                     </ol>
+                  <div class="col col-md-4 col-sm-6">
+                     <div class="widget about-widget">
+                        <div class=footer-logo>
+                           <img src="assets/images/footerlogo.png">
+                        </div>
+                        <ul class=contact-info>
+                           <p>The company has a successful leadership track record of two generations of being in the
+                              same business of machine manufacturing, which once reckoned from machining job work 30
+                              years back. Since then we have never looked back.</p>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col col-md-4 col-sm-6">
+                     <div class="widget about-widget">
+                        <h3>GET IN TOUCH</h3>
+                        <ul class=contact-info>
+                           <li><i class="fa fa-home"></i> Head Office
+                              <br>Ekveera Laghu-Udyog Sankul, Unit No.14, Road No.25, Wagale Industrial Estate, Thane
+                              West - 400 604 Maharashtra, India.
+                           </li>
+                           <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
+                           <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
+                           <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
+                           <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col col-md-4 col-sm-6">
+                     <div class="widget service-links-widget">
+                        <h3>Services</h3>
+                        <ul>
+                           <li><a href=dairy.html>Dairy </a>
+                           </li>
+                           <li><a href=food.html>Food </a>
+                           </li>
+                           <li><a href=beverages.html>Beverage </a>
+                           </li>
+                           <li><a href=pharma.html>Pharma </a>
+                           </li>
+                           <li><a href=cosmetics.html>Cosmetics </a>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
-         </section>
-         <section class="contact-pg-section section-padding">
+         </div>
+         <div class=copyright-info>
             <div class=container>
-               <div class="row">
-                  <div class="col col-md-5">
-                     <div class="contact-info">
-                        <h3>Head Office</h3>
-                        <ul>
-                           <li>
-                              <div class="icon"><i class="fa fa-phone"></i>
-                              </div>
-                              <p><span>Phone</span> (+91) 89765 77735</p>
-                              <p><span></span>(+91) 99877 84735</p>
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-envelope"></i>
-                              </div>
-                              <p><span>Email</span>
-                           <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
-                           <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
-                           </p>
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-clock-o"></i>
-                              </div>
-                              <p><span>Working Hours:</span> 9:00 Am To 6:00 Pm (Friday Off)</p>
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-location-arrow"></i>
-                              </div>
-                              <p><span>Office</span> Ekveera Laghu-Udyog Sankul,
-                                 <br>Unit No.14, Road No.25,
-                                 <br>Wagale Industrial Estate,
-                                 <br>Thane West - 400 604 Maharashtra, India.
-                              </p>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col col-md-5">
-                     <div class="contact-info">
-                        <h3>Sales Office</h3>
-                        <ul>
-                           <li>
-                              <div class="icon"><i class="fa fa-phone"></i>
-                              </div>
-                              <p><span>Phone</span> (+91) 89765 77735</p>
-                              <p><span></span>(+91) 99877 84735</p>
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-envelope"></i>
-                              </div>
-                              <p><span>Email</span>
-                           <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
-                           <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
-                           </p>		
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-clock-o"></i>
-                              </div>
-                              <p><span>Working Hours:</span> 9:00 Am To 5:30 Pm (Sunday Off)</p>
-                           </li>
-                           <li>
-                              <div class="icon"><i class="fa fa-location-arrow"></i>
-                              </div>
-                              <p><span>Office</span> Plot no B-35/3, Additional Ambernath Industrial Area,
-                                 <br>Jambhivali Ambernath East - 421506
-                                 <br>District - Thane Maharashtra, India
-                              </p>
-                           </li>
-                        </ul>
-                     </div>
-                     <br><br>
-                  </div>
-                  <div class="col-md-5 extrapadding">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.968058249743!2d72.94720988557405!3d19.200782065978153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9aa9b4bc6124e650!2sFill+Pack+Machine!5e0!3m2!1sen!2sin!4v1499533130119" style="border:0" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
-                  </div>
-                  <div class="col-md-5 extrapadding">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.625540634027!2d73.189249415429!3d19.179927927703865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be793c9dd166dbb%3A0xe353a210174a726e!2sFillpack+Technology!5e0!3m2!1sen!2sin!4v1533713611680" style="border:0" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
-                  </div>
-                  <div class="row">
-                     <div class="col col-md-9">
-                        <h3>Send us an Email</h3>
-                        <form class="contact-form form contact-validation-active row" id="contact-form-s2" novalidate="novalidate">
-                           <div class="col col-sm-6">
-                              <label for="f-name">First Name</label>
-                              <input type="text" class="form-control" id="f-name" name="f_name">
-                           </div>
-                           <div class="col col-sm-6">
-                              <label for="l-name">Last Name</label>
-                              <input type="text" class="form-control" id="l-name" name="l_name">
-                           </div>
-                           <div class="col col-sm-6">
-                              <label for="email">Email</label>
-                              <input type="email" class="form-control" id="email" name="email">
-                           </div>
-                           <div class="col col-sm-6">
-                              <label for="phone">Phone No</label>
-                              <input type="text" class="form-control" id="phone" name="phone">
-                           </div>
-                           <div class="col col-sm-12">
-                              <label for="message">Message</label>
-                              <textarea class="form-control" id="message" name="note"></textarea>
-                           </div>
-                           <div class="col col-sm-2 submit-btn">
-                              <button class="theme-btn">Submit</button>
-                              <div id="loader">
-                                 <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-                              </div>
-                           </div>
-                           <div class="error-handling-messages">
-                              <div id="success">Thank you</div>
-                              <div id="error">Error occurred while sending email. Please try again later.</div>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
+               <p>2018 &copy; All Rights Reserved by <a href>Fillpack Technology</a>
+               </p>
             </div>
-         </section>
-         <footer class=site-footer>
-            <div class=upper-footer>
-               <div class=container>
-                  <div class=row>
-                     <div class="col col-md-4 col-sm-6">
-                        <div class="widget about-widget">
-                           <div class=footer-logo>
-                              <img src="assets/images/footerlogo.png">
-                           </div>
-                           <ul class=contact-info>
-                              <p>The company has a successful leadership track record of two generations of being in the same business of machine manufacturing, which once reckoned from machining job work 30 years back. Since then we have never looked back.</p>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col col-md-4 col-sm-6">
-                        <div class="widget about-widget">
-                           <h3>GET IN TOUCH</h3>
-                           <ul class=contact-info>
-                              <li><i class="fa fa-home"></i> Head Office
-                                 <br>Ekveera Laghu-Udyog Sankul, Unit No.14, Road No.25, Wagale Industrial Estate, Thane West  - 400 604 Maharashtra, India.
-                              </li>
-                              <li><i class="fa fa-phone"></i>(+91) 897 657 7735</li>
-                              <li><i class="fa fa-phone"></i>(+91) 998 778 4735</li>
-                              <li><i class="fa fa-envelope"></i> export@fillpacktechnology.com</li>
-                              <li><i class="fa fa-envelope"></i> marketing@fillpacktechnology.com</li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col col-md-4 col-sm-6">
-                        <div class="widget service-links-widget">
-                           <h3>Services</h3>
-                           <ul>
-                              <li><a href=dairy.html>Dairy </a>
-                              </li>
-                              <li><a href=food.html>Food </a>
-                              </li>
-                              <li><a href=beverages.html>Beverage </a>
-                              </li>
-                              <li><a href=pharma.html>Pharma </a>
-                              </li>
-                              <li><a href=cosmetics.html>Cosmetics </a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class=copyright-info>
-               <div class=container>
-                  <p>2018 &copy; All Rights Reserved by <a href>Fillpack Technology</a>
-                  </p>
-               </div>
-            </div>
-         </footer>
-      </div>
-      <script src=assets/js/jquery.min.js></script>
-      <script src=assets/js/bootstrap.min.js></script>
-      <script src=assets/js/jquery-plugin-collection.js></script>
-      <script type=text/javascript src=https://maps.googleapis.com/maps/api/js?key></script>
-      <script src=assets/js/script.js></script>
-      <script>
-         includeHTML();
-      </script>
-   </body>
+         </div>
+      </footer>
+   </div>
+   <script src=assets/js/jquery.min.js></script>
+   <script src=assets/js/bootstrap.min.js></script>
+   <script src=assets/js/jquery-plugin-collection.js></script>
+   <script type=text/javascript src=https://maps.googleapis.com/maps/api/js?key></script>
+   <script src=assets/js/script.js></script>
+   <script>
+      includeHTML();
+   </script>
+</body>
+
 </html>
