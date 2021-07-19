@@ -7,6 +7,48 @@ echo '<section class="section-padding partners">
       <div class="col col-xs-12">
          <div class=partners-slider>
             <div class=grid>
+               <img src="/assets/images/partners/client1.png" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client2.png" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client3.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client4.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client5.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client6.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client7.png" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client8.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client9.png" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client10.png" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client11.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client12.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client13.jpg" alt>
+            </div>
+            <div class=grid>
+               <img src="/assets/images/partners/client14.jpg" alt>
+            </div>
+            <div class=grid>
                <img src="/assets/images/partners/govind.jpg" alt>
             </div>
             <div class=grid>

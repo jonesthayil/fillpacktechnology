@@ -28,7 +28,7 @@
    <link href="/assets/images/favicon/apple-touch-icon-72x72.png" rel=apple-touch-icon sizes=72x72>
    <link href="/assets/images/favicon/apple-touch-icon-114x114.png" rel=apple-touch-icon sizes=114x114>
    <link href="/assets/images/favicon/apple-touch-icon-144x144.png" rel=apple-touch-icon sizes=144x144>
-   <!-- <link href="/assets/css/fontawesome.min.css" rel=stylesheet> -->
+   <link href="/assets/css/fontawesome.min.css" rel=stylesheet>
    <script src="/assets/js/8a660a2482.js"></script>
    <link href="/assets/css/flaticon.css" rel=stylesheet>
    <link href="/assets/css/bootstrap.min.css" rel=stylesheet>
@@ -93,7 +93,7 @@
                   cottage cheese, the wonderful aroma of paneer cooking, the precise cuts and proportion –
                   brought to you by us. In fact, we pioneered the art, invented the machine. Our unique paneer
                   cutting machines are testimony to that. When you think of us – smile.</p>
-               <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
+               <div class=btns> <a href="/about.php" target=_blank class=theme-btn>About us</a>
                </div>
             </div>
          </div>
@@ -108,7 +108,7 @@
       <p>Food packaging at its best. Clean, convenient and attractive. We bring you the safest and the
          cleanest packaging keeping in mind your needs, ensuring that the containment is secure and of
          the best quality. We are a part of your life even when you do not notice us overtly.</p>
-      <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
+      <div class=btns> <a href="/about.php" target=_blank class=theme-btn>About us</a>
       </div>
    </div>
    </div>
@@ -125,7 +125,7 @@
          health and that you receive your medications in the safest and most convenient packaging is a
          way of life with us. We ensure the safety of your medicines so that you may ensure your
          health.</p>
-      <div class=btns> <a href=about.php target=_blank class=theme-btn>About us</a>
+      <div class=btns> <a href="/about.php" target=_blank class=theme-btn>About us</a>
       </div>
    </div>
    </div>
@@ -159,7 +159,7 @@
                         <div class=details>
                            <div class=info>
                               <img src="/assets/images/services/image3.jpg" alt="" class=bg-image>
-                                 <a href=dairy.php>
+                                 <a href="/dairy.php">
                                     <h3><i class=" fi flaticon-left-quotes-sign"></i> Dairy </h3>
                               </a>
                               <p></p>
@@ -173,7 +173,7 @@
                         <div class=details>
                            <div class=info>
                               <img src="/assets/images/services/food1.jpg" alt="" class=bg-image>
-                                 <a href=food.php>
+                                 <a href="/food.php">
                                     <h3><i class=" fi flaticon-left-quotes-sign"></i> Food </h3>
                               </a>
                               <p></p>
@@ -187,7 +187,7 @@
                         <div class=details>
                            <div class=info>
                               <img src="/assets/images/cosmetic.jpg" alt="" class=bg-image>
-                                 <a href=cosmetics.php>
+                                 <a href="/cosmetics.php">
                                     <h3><i class=" fi flaticon-left-quotes-sign"></i> Cosmetics </h3>
                               </a>
                               <p></p>
@@ -201,7 +201,7 @@
                         <div class=details>
                            <div class=info>
                               <img src="/assets/images/services/pharma2.jpg" alt="" class=bg-image>
-                                 <a href=pharma.php>
+                                 <a href="/pharma.php">
                                     <h3><i class=" fi flaticon-left-quotes-sign"></i> Pharma </h3>
                               </a>
                               <p>.</p>
@@ -215,7 +215,7 @@
                         <div class=details>
                            <div class=info>
                               <img src="/assets/images/services/image2.jpg" alt="" class=bg-image>
-                                 <a href=Beverages.php>
+                                 <a href="/beverages.php">
                                     <h3><i class=" fi flaticon-left-quotes-sign"></i> Beverage </h3>
                               </a>
                               <p></p>
@@ -308,7 +308,7 @@
                      Project, Ghee Jar Filling Line Machines, Curd Cup Packing Machine, Paneer Equipments, Ice Cream
                      Equipments, Milk Processing Plants, Ghee Plant, Cold Room, Hygienic Stations, Lab Furniture,
                      Bulk Milk Coolers.</p>
-                  <a href=about.php class="theme-btn read-more">Read More</a>
+                  <a href="/about.php" class="theme-btn read-more">Read More</a>
                </div>
             </div>
             <div class="col col-md-8">
@@ -543,7 +543,7 @@
          <img src="/assets/images/backhoe-loader.png" alt="">
       </div>
    </section>
-   <?php include (" clients.php"); ?>
+   <?php include ("clients.php"); ?>
          <section class="contact-section section-padding parallax" data-bg-image=assets/images/contact-section-bg.jpg>
             <div class=container>
                <div class=row>

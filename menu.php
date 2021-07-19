@@ -110,10 +110,10 @@ echo '<div class="topbar topbar-style-2">
          <ul class="nav navbar-nav">
             <li class=menu-item-has-children> <a href="/">Home</a>
             </li>
-            <li><a href="about.php" >About</a>
+            <li><a href="/about.php" >About</a>
             </li>
             <li class=menu-item-has-children>
-               <a href="dairy.php" >Dairy</a>
+               <a href="/dairy.php" >Dairy</a>
                <ul class=sub-menu>
                   <li><a href="/dairy/bottle-filling-machine.php">Bottle Filling Machine</a>
                   </li>
@@ -213,14 +213,14 @@ echo '<div class="topbar topbar-style-2">
                   </li>
                </ul>
             </li>
-            <li><a href="contact.php" >Contact</a>
+            <li><a href="/contact.php" >Contact</a>
             </li>
          </ul>
       </div>
       <div class=cart-contact>
          <div class=mini-cart></div>
       </div>
-      <a href="contact.php" target=_blank class="theme-btn-s2 request-quote">Request Quote</a>
+      <a href="/contact.php" target=_blank class="theme-btn-s2 request-quote">Request Quote</a>
    </div>
 </nav>';
 ?>

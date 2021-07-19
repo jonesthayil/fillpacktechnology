@@ -13,7 +13,8 @@
    <link href="/assets/images/favicon/apple-touch-icon-72x72.png" rel=apple-touch-icon sizes=72x72>
    <link href="/assets/images/favicon/apple-touch-icon-114x114.png" rel=apple-touch-icon sizes=114x114>
    <link href="/assets/images/favicon/apple-touch-icon-144x144.png" rel=apple-touch-icon sizes=144x144>
-   <link href="/assets/css/font-awesome.min.css" rel=stylesheet>
+   <link href="/assets/css/fontawesome.min.css" rel=stylesheet>
+   <script src="/assets/js/8a660a2482.js"></script>
    <link href="/assets/css/flaticon.css" rel=stylesheet>
    <link href="/assets/css/bootstrap.min.css" rel=stylesheet>
    <link href="/assets/css/animate.css" rel=stylesheet>
@@ -164,7 +165,7 @@
                               class="img img-responsive"></div>
                      </div>
                      <div class=product-info>
-                        <h3><a href=paneer-cubing-machine.php>Paneer Cubing machine</a></h3>
+                        <h3><a href="/paneer-cubing-machine.php">Paneer Cubing machine</a></h3>
                         <span class=price></span>
                      </div>
                   </div>

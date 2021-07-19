@@ -32,15 +32,15 @@ echo '<footer class=site-footer>
             <div class="widget service-links-widget">
                <h3>Services</h3>
                <ul>
-                  <li><a href=dairy.php>Dairy </a>
+                  <li><a href="/dairy.php">Dairy </a>
                   </li>
-                  <li><a href=food.php>Food </a>
+                  <li><a href="/food.php">Food </a>
                   </li>
-                  <li><a href=beverages.php>Beverage </a>
+                  <li><a href="/beverages.php">Beverage </a>
                   </li>
-                  <li><a href=pharma.php>Pharma </a>
+                  <li><a href="/pharma.php">Pharma </a>
                   </li>
-                  <li><a href=cosmetics.php>Cosmetics </a>
+                  <li><a href="/cosmetics.php">Cosmetics </a>
                   </li>
                </ul>
             </div>
