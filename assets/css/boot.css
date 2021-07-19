@@ -1,0 +1,29 @@
+@media screen and (max-width: 786px) {
+
+#subscribeModal .form-control {
+    height: 34px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 30px;
+    margin-left: 108px;
+}
+}
+
+@media screen and (max-width: 425px){
+#subscribeModal .form-control {
+    height: 34px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 30px;
+    margin-left: 40px;
+}
+}
+@media screen and (max-width: 320px){
+#subscribeModal .form-control {
+    height: 34px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 30px;
+    margin-left: 4px;
+}
+}
