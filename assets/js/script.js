@@ -1088,36 +1088,25 @@
 
       submitHandler: function (form) {
         $.ajax({
-          type: "POST",
+          type: "GET",
 
-          url: "mail-2.php",
+          url: "http://localhost:8000/fillpacktechnology/",
 
           data: $(form).serialize(),
-
-          success: function () {
+          success: function (response) {
+          },
+          error: function (response) {
             $("#loader").hide();
 
-            $("#success").slideDown("slow");
+              $("#success").slideDown("slow");
+              setTimeout(function (response, textStatus, xhr) {
+                $("#success").slideUp("slow");
+              }, 3000);
 
-            setTimeout(function () {
-              $("#success").slideUp("slow");
-            }, 3000);
-
-            form.reset();
-          },
-
-          error: function () {
-            $("#loader").hide();
-
-            $("#error").slideDown("slow");
-
-            setTimeout(function () {
-              $("#error").slideUp("slow");
-            }, 3000);
-          },
+              form.reset();
+          }
         });
-
-        return false; // required to block normal submit since you used ajax
+        return false;
       },
     });
   }
@@ -1138,7 +1127,7 @@
 
   var htmlHead = $("head");
 
-//   $("body").append(switcherHtml);
+  //   $("body").append(switcherHtml);
 
   // htmlHead.append(blankStyleInject);
 

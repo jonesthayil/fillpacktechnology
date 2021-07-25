@@ -197,34 +197,6 @@
    <script src="/assets/js/jquery-plugin-collection.js"></script>
    <script type=text/javascript src=https://maps.googleapis.com/maps/api/js?key></script>
    <script src="/assets/js/script.js"></script>
-   <?php
-   use PHPMailer\PHPMailer\PHPMailer;
-   use PHPMailer\PHPMailer\Exception;
-   
-   require 'path/to/PHPMailer/src/Exception.php';
-   require 'path/to/PHPMailer/src/PHPMailer.php';
-   require 'path/to/PHPMailer/src/SMTP.php';
-$mail = new PHPMailer();
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
-$mail->Username = 'parabtechnologies@gmail.com';
-$mail->Password = 'Kayra@2018pp';
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
-
-$mail->setFrom('parabtechnologies@gmail.com');
-$mail->addAddress('prashant@parabtechnologies.com', 'Prashant Parab');
-$mail->Subject = 'Thanks for choosing Our Hotel!';
-$mail->isHTML(TRUE);
-$mail->Body = '<html>Hi there, we are happy to <br>confirm your booking.</br> Please check the document in the attachment.</html>';
-$mail->AltBody = 'Hi there, we are happy to confirm your booking. Please check the document in the attachment.';
-if(!$mail->send()){
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-} ?>
 </body>
 
 </html>
