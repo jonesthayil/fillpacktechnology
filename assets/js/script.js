@@ -1090,7 +1090,7 @@
         $.ajax({
           type: "GET",
 
-          url: "http://localhost:8000/fillpacktechnology/",
+          url: "https://pvlin.pythonanywhere.com/fillpacktechnology/",
 
           data: $(form).serialize(),
           success: function (response) {
