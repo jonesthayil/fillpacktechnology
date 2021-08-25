@@ -548,7 +548,7 @@
       <div class=container>
          <div class=row>
             <div class="col col-lg-6 col-lg-offset-1 col-md-6">
-               <div class=section-title-white>
+               <!-- <div class=section-title-white>
                   <h2>Request a quote</h2>
                </div>
                <p></p>
@@ -585,7 +585,7 @@
                         <div id=error>Error occurred while sending email. Please try again later.</div>
                      </div>
                   </form>
-               </div>
+               </div> -->
             </div>
             <div class="col col-md-4 col-md-offset-1 col-md-6">
                <div class=contact-section-contact-box>
