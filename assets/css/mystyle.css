@@ -244,6 +244,32 @@ margin-top: 47px;
 .partners-slider .grid:hover {
     border-color: #5a9813;
 }
+
+.partners-slider .owl-nav {
+    text-align: right;
+}
+
+.partners-slider .owl-prev,
+.partners-slider .owl-next {
+    display: inline-block;
+    font-size: 24px;
+    background: #5A9813;
+    padding: 10px;
+    line-height: 0;
+    margin: -20px 0px 0;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+}
+
+.partners-slider .owl-prev {
+    left: -40px;
+}
+
+.partners-slider .owl-next {
+    right: -40px;
+}
+
 .theme-accordion-s1 .panel-heading a {
     background-color: #5a9813;
 }

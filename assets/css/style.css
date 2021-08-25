@@ -224,6 +224,14 @@ img {
   border-radius: 3px;
 }
 
+.whatsapp-btn {
+  position: fixed;
+  bottom: 200px;
+  right: 20px;
+  width: 50px;
+  z-index: 99;
+}
+
 @media (max-width: 991px) {
   .back-to-top {
     width: 35px;

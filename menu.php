@@ -42,7 +42,6 @@ echo '<div class="topbar topbar-style-2">
    <a href="#" class="" data-toggle="modal" data-target="#employeeOfTheMonthModal">
       Employee of the Month
    </a>
-   <!-- Modal -->
    <div class="modal fade" id="employeeOfTheMonthModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-lg" role="document">
          <div class="modal-content">

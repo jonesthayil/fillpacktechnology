@@ -1,5 +1,10 @@
 <?php
 echo '<footer class=site-footer>
+<div class="whatsapp-btn">
+   <a href="//api.whatsapp.com/send?phone=919987784735&text=Type your message here" target="_blank">
+      <img src="/assets/images/whatsapp-icon.png" />
+   </a>
+</div>
 <div class=upper-footer>
    <div class=container>
       <div class=row>
